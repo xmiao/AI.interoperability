@@ -1,7 +1,7 @@
 # sushi-config.yaml is documented https://fshschool.org/docs/sushi/configuration/
 # ───────────────────────────────────────────────────
 id: philips.ai.interoperability
-#canonical: https://profiles.ihe.net/RAD/IMR
+canonical: https://philips.com/RAD/Philips/Philips.AI.Interoperability
 version: 0.0.1-current
 releaseLabel: trial-build
 date: 2022-03-18
