@@ -1,0 +1,12 @@
+@startuml
+
+actor "Radiologist" as Rad
+
+participant "Report Creator" as RCreator
+participant "Report Repository" as Repo
+
+Rad->>RCreator: //End dictation of study//\n//with multimedia references//
+
+RCreator->Repo: Store multimedia report [RAD-Y1]
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+
+hide footbox
+
+participant "Sender" as Creator
+participant "Receiver" as Repo
+
+activate Creator
+activate Repo
+Creator->Repo: Store Multimedia Report Bundle Request
+Repo-->Creator: Store Multimedia Report Bundle Response
+deactivate Repo
+deactivate Creator
+
+@enduml
