@@ -47,10 +47,10 @@ I --> S: tear down AI instance
 end
 deactivate S
 deactivate I
+I -> R: 13. update AI execution progress
 
 group Interactive verification
 activate R
-I -> R: 13. update AI execution progress
 I -> R: <font color="darkgreen">15. send AI result
 activate U
 R --> U: (show result)
