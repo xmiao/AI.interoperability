@@ -1,28 +1,32 @@
 # sushi-config.yaml is documented https://fshschool.org/docs/sushi/configuration/
 # ───────────────────────────────────────────────────
-id: philips.ai.interoperability
-#canonical: https://profiles.ihe.net/RAD/IMR
-version: 0.0.1-current
-releaseLabel: trial-build
-date: 2022-03-18
-name: PHILIPS_AI_INTEROPERABILITY
-title: "Philips AI Interoperability"
+id: ihe.rad.imr
+canonical: https://profiles.ihe.net/RAD/IMR
+version: 1.0.0-current
+releaseLabel: ci-build
+#releaseLabel: ballot
+#releaseLabel: Trial-Implementation
+#date: 2022-03-18
+name: IHE_RAD_IMR
+title: "Interactive Multimedia Report (IMR)"
 status: active
 publisher:
-  - name: Philips
-  - url: http://www.philips.com
-  - email: xijiang.miao@philips.com
+  - name: IHE Radiology Technical Committee
+  - url: https://www.ihe.net/ihe_domains/radiology/
+  - email: radiology@ihe.net
 contact:
   - name: IHE Radiology Technical Committee
     telecom:
       - system: email
-        value: xijiang.miao@philips.com
-description: Support AI Interoperability
-license:  Philips's license
+        value: radiology@ihe.net
+description: Support encoding and presentation of an interactive multimedia report
+license:  CC-BY-SA-4.0
 fhirVersion: 4.0.1
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
-copyright: TBD
-copyrightYear: 2022+
+copyright: IHE http://www.ihe.net/Governance/#Intellectual_Property
+copyrightYear: 2021+
+
+
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
@@ -52,6 +56,24 @@ pages:
   index.md:
     title: 1:52. IMR Home
     generation: markdown
+  volume-1.md:
+    title: 1:52 Interactive Multimedia Report (IMR)
+    generation: markdown
+  RAD-141.md:
+    title: 2:4.141 Store Multimedia Report [RAD-141]
+    generation: markdown
+  RAD-142.md:
+    title: 2:4.142 Display Multimedia Report [RAD-142]
+    generation: markdown
+  RAD-143.md:
+    title: 2:4.143 Find Multimedia Report [RAD-143]
+    generation: markdown
+  RAD-144.md:
+    title: 2:4.144 Retrieve Rendered Multimedia Report [RAD-144]
+    generation: markdown
+  RAD-145.md:
+    title: 2:4.145 Display Images [RAD-145]
+    generation: markdown
   testplan.md:
     title: "Test Plan"
     generation: markdown
@@ -66,6 +88,17 @@ menu:
   IMR Home: index.html
   Volume 1:
     Introduction: volume-1.html
+    Actors and Transactions: volume-1.html#1521-imr-actors-transactions-and-content-modules
+    Actor Options: volume-1.html#1522-imr-actor-options
+    Required Groupings: volume-1.html#1523-imr-required-actor-groupings
+    Overview: volume-1.html#1524-interactive-multimedia-report-overview
+    Security Considerations: volume-1.html#1525-imr-security-considerations
+    Cross-Profile Considerations: volume-1.html#1526-imr-cross-profile-considerations
+  Volume 2:
+    "Store Multimedia Report [RAD-141]": RAD-141.html
+    "Display Multimedia Report [RAD-142]": RAD-142.html
+    "Find Multimedia Report [RAD-143]": RAD-143.html
+    "Retrieve Rendered Multimedia Report [RAD-144]": RAD-144.html
     "Display Referenced Images in Multimedia Report [RAD-145]": RAD-145.html
   Test Plan: testplan.html
   Artifacts: artifacts.html
