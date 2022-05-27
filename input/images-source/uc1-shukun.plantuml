@@ -1,0 +1,44 @@
+@startuml
+
+
+participant "RIS" as RIS
+participant "Result Board" as AIR
+participant "PACS" as PACS
+participant "ISAI" as ISAI
+participant "Shukun" as Shukun
+
+activate ISAI
+activate RIS
+PACS -> ISAI: 9 Notify image acquisition completed (Pr3)
+activate Shukun
+ISAI -> Shukun: start Shukun
+ISAI -> Shukun: ? Send parameters to AI algorithms as input (Pr3)
+PACS <-> Shukun: ? load image data from PACS
+Shukun -> ISAI: ? Send raw AI execution results (Pr 2)
+ISAI -> Shukun: shutdown Shukun
+deactivate Shukun
+
+ISAI->> AIR: 14 Send AI execution results (Pr 3)
+AIR->>  ISAI: the feedback from the result board
+ISAI->> PACS: 19 send the clinical data store approval / reject. (Pr 3)
+ISAI->> RIS: 15 send AI execution results （Pr 1) 赛迈特锐，RIS
+@enduml
+
+/*
+
+
+优先级和参与者有关。
+Actors:
+----------
+Report Creator ?
+Report Reader ?
+Rendered Report Reader ?
+Report Repository ?
+Image Manager/Image Archive
+Image Display
+Image Display Invoker
+Evidence Creator
+Evidence Moderator ? <- ISAI
+
+
+*/

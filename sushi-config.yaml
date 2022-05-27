@@ -11,12 +11,12 @@ status: active
 publisher:
   - name: Philips
   - url: http://www.philips.com
-  - email: xijiang.miao@philips.com
+  - email: research@philips.com
 contact:
   - name: IHE Radiology Technical Committee
     telecom:
       - system: email
-        value: xijiang.miao@philips.com
+        value: research@philips.com
 description: Support AI Interoperability
 license:  Philips's license
 fhirVersion: 4.0.1
