@@ -8,21 +8,20 @@ participant "PACS" as PACS
 participant "ISAI" as ISAI
 participant "Shukun" as Shukun
 
-activate ISAI
-activate RIS
-PACS -> ISAI: 9 Notify image acquisition completed (Pr3)
-activate Shukun
-ISAI -> Shukun: start Shukun
+RIS++
+PACS -> ISAI++: 9 Notify image acquisition completed (Pr3)
+'activate Shukun
+ISAI -> Shukun++: start Shukun
 ISAI -> Shukun: ? Send parameters to AI algorithms as input (Pr3)
-PACS <-> Shukun: ? load image data from PACS
-Shukun -> ISAI: ? Send raw AI execution results (Pr 2)
-ISAI -> Shukun: shutdown Shukun
-deactivate Shukun
+Shukun-> PACS++: ? load image data from PACS
+return
+Shukun-> ISAI: ? Send raw AI execution results (Pr 2)
+return shutdown Shukun
 
-ISAI->> AIR: 14 Send AI execution results (Pr 3)
-AIR->>  ISAI: the feedback from the result board
+ISAI-> AIR++: 14 Send AI execution results (Pr 3)
+return the feedback from the result board
 ISAI->> PACS: 19 send the clinical data store approval / reject. (Pr 3)
-ISAI->> RIS: 15 send AI execution results （Pr 1) 赛迈特锐，RIS
+ISAI-> RIS: 15 send AI execution results （Pr 1) 赛迈特锐，RIS
 @enduml
 
 /*

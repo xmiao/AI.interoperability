@@ -1,4 +1,6 @@
 @startuml
+title "Seuqnce Diagram by Felicity"
+
 skinparam maxMessageSize 150
 scale 500 width
 
