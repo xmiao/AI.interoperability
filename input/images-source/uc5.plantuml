@@ -1,0 +1,39 @@
+@startuml
+skinparam maxMessageSize 150
+
+'actor "User" as U
+participant "RIS" as R
+participant "Modality" as M
+participant "ISAI" as I
+participant "ISAI\nDICOM\nCache" as P
+participant "3rd party\nalgorithms" as S
+
+ -> R : Imaging Order
+R -> M++: Worklist
+loop
+M -> M: Scan
+M -> I++: Request for AI algorithm
+P -> M++: load image
+return
+group Algorithm
+I -> S ++: Start AI algorithm
+S -> S: calculation
+'S -> P: result
+return AI result / Findings
+end
+return Algorithm result
+note over M
+User interactively
+manipulate the
+image.
+The final result is
+saved to PACS.
+end note
+end
+return AI Result / Structural report
+ <- R: Structural Report
+
+
+
+
+@enduml
