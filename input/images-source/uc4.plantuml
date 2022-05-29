@@ -44,7 +44,7 @@ note over S
 algorithms from
 AI vendors
 end note
-I --> S++: ? start AI instance
+I --> S: ? start AI instance
 I -> P++: 11. DICOM Q/R images
 return
 I -> S++: 12. AI application execution
@@ -55,7 +55,7 @@ I -> R: 13. update AI execution progress
 
 group Interactive verification
 I -> R++: <font color="darkgreen">15. send AI result
-R --> U++: (show result)
+R -> U++: (show result)
 note over R
 User verify the result
 by choosing accept/reject
