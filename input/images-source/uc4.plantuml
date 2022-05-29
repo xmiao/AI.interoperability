@@ -1,5 +1,6 @@
 @startuml
 skinparam maxMessageSize 150
+scale 500 width
 
 actor "User" as U
 participant "RIS" as R

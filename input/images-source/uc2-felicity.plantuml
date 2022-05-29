@@ -1,5 +1,6 @@
 @startuml
-skinparam maxMessageSize 200
+skinparam maxMessageSize 150
+scale 500 width
 
 participant "RIS" as R
 participant "Modality" as M

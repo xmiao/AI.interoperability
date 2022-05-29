@@ -1,5 +1,6 @@
 @startuml
-
+skinparam maxMessageSize 150
+scale 500 width
 
 participant "RIS" as RIS
 participant "Result Board" as AIR
