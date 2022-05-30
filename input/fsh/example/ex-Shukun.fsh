@@ -10,16 +10,16 @@ Usage: #example
 // * entry.request.method = #POST
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Parameters/P_Chinese"
-* entry[=].resource = PPatient
+* entry[=].resource = ex-Patient
 * entry[=].request.method = #POST
 * entry[=].request.url = "QuestionnaireResponse/$generateHealthCertificate"
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Parameters/P_Chinese"
-* entry[=].resource = PPatient
+//* entry[=].resource = PPatient
 * entry[=].request.method = #POST
 * entry[=].request.url = "QuestionnaireResponse/$generateHealthCertificate"
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Parameters/P_Chinese"
-* entry[=].resource = PPatient
+//* entry[=].resource = PPatient
 * entry[=].request.method = #POST
 * entry[=].request.url = "QuestionnaireResponse/$generateHealthCertificate"
