@@ -25,7 +25,7 @@ An [SVC Bundle](StructureDefinition-svc-bundle.html) is a document bundle contai
 // * entry[svcCompositionEntry].resource 1..1 MS
 // * entry[svcCompositionEntry].resource only SVC_Composition
 * entry[svcPatientEntry].resource 1..1 MS
-* entry[svcPatientEntry].resource only P_Patient
+* entry[svcPatientEntry].resource only PPatient
 // * entry[svcAuthorEntry].resource 1..1 MS
 // * entry[svcAuthorEntry].resource only SHC_Organization
 // * entry[svcImmunizationEntry].resource 1..1 MS

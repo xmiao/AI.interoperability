@@ -16,7 +16,7 @@ Description:    "AIR AI Result profile on Bundle"
   svcPatientEntry 1..1 MS
 
 * entry[svcPatientEntry].resource 1..1 MS
-* entry[svcPatientEntry].resource only P_Patient
+* entry[svcPatientEntry].resource only PPatient
 
 
 //* entry[DiagnosticReport].resource only DiagnosticReport

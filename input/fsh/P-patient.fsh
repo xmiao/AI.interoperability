@@ -1,13 +1,12 @@
-Profile:      P_Patient
+Profile:      PPatient
 Parent:       Patient
 // Parent:       http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-pre-uv-ips //this forces gender.  not good.
-Id:           DDCCPatient
+Id:           PPatient
 Title:        "DDCC Patient"
 Description:	"""
 A DDCCPatient should:
 * if the [identifier.assigner](StructureDefinition-DDCCPatient-definitions.html#Patient.identifier] is set then the value of [identifier.assigner](StructureDefinition-DDCCPatient-definitions.html#Patient.identifier.assigner) should be set to reference the [DDCC Organization](StructureDefinition-DDCCOrganization.html) resource associated to the PHA.
 * obeys who-ddcc-patient-1
-
 """
 * identifier 0.. MS
 * identifier.system MS
