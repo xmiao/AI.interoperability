@@ -7,11 +7,7 @@ Usage: #example
 * type = #document
 
 * entry[+].resource = ex-Patient
-
-* entry[+].fullUrl = "http://www.example.org/fhir/Parameters/P_Chinese"
-//* entry[=].resource = PPatient
-* entry[=].request.method = #POST
-* entry[=].request.url = "QuestionnaireResponse/$generateHealthCertificate"
+* entry[+].resource = ex-Composition
 
 * entry[+].fullUrl = "http://www.example.org/fhir/Parameters/P_Chinese"
 //* entry[=].resource = PPatient
