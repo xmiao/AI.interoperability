@@ -3,21 +3,18 @@ Parent:         Bundle
 Id:             air-store-ai-result-bundle
 Title:          "AIR Store AI Result Bundle"
 Description:    "AIR AI Result profile on Bundle"
-
-* . MS
-* . ^short = "Smart Vaccination Certificate Bundle"
-* entry 3.. MS
-* entry ^slicing.discriminator[0].type = #value
-* entry ^slicing.discriminator[0].path = "resource"
+* meta.profile 1..*
+* type = #document
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = resource
 * entry ^slicing.rules = #closed
-* entry ^slicing.ordered = true
-
-* entry contains
-  svcPatientEntry 1..1 MS
-
-* entry[svcPatientEntry].resource 1..1 MS
-* entry[svcPatientEntry].resource only P_Patient
-
+* entry ^slicing.description = "Slicing based on the profile conformance of the entry"
+* entry and entry.resource MS
+* entry contains 
+    //DiagnosticReport 1..1 and
+    ServiceRequest 0..* and
+    Observation 0..* and
+    ImagingStudy 0..*
 
 //* entry[DiagnosticReport].resource only DiagnosticReport
 //* entry[DiagnosticReport] ^short = "the DiagnosticReport"
