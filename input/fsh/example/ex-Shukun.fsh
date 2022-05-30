@@ -11,3 +11,4 @@ Usage: #example
 * entry[+].resource = ex-Organization
 * entry[+].resource = ex-ImagingStudy
 * entry[+].resource = ex-Observation
+* entry[+].resource = ex-Binary
