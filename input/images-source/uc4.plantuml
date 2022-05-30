@@ -27,7 +27,7 @@ participant "Evidence Creator\n//3rd party//\n//algorithms//" as S
 
 U -> R: 1. patient registration
 group Patient flow optimization
-R -> I++: 2. patient registration（VDO)
+R -> I++: 2. patient registration
 return 3. propose worklist
 R -> M: 5. send worklist
 end

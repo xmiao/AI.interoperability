@@ -10,13 +10,13 @@ participant "Shukun" as Shukun
 
 RIS++
 PACS -> ISAI++: 9 Notify image acquisition completed (Pr3)
-'activate Shukun
-ISAI -> Shukun++: start Shukun
+ISAI --> Shukun++: start Shukun
 ISAI -> Shukun: ? Send parameters to AI algorithms as input (Pr3)
 Shukun-> PACS++: ? load image data from PACS
 return
 Shukun-> ISAI: ? Send raw AI execution results (Pr 2)
-return shutdown Shukun
+ISAI --> Shukun: shutdown Shukun
+Shukun --
 
 ISAI-> AIR++: 14 Send AI execution results (Pr 3)
 return the feedback from the result board

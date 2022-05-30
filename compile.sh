@@ -1,1 +1,2 @@
-sushi ..
+cd ..
+sushi AI.interoperability
