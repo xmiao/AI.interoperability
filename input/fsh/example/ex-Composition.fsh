@@ -4,6 +4,7 @@ Title:       "Example of a composition for AI result"
 Description: "Example of a composition for AI result"
 Usage: #example
 
+* id = "PHY-Composition-001"
 * status = #final
 
 * type.coding.code = #XM0CX4

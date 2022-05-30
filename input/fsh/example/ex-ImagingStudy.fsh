@@ -4,7 +4,7 @@ Title: "ImagingStudy example"
 Description: "ImagingStudy example"
 Usage: #example
 
-* id = "ID-ImagingStudy-001"
+* id = "PHY-ImagingStudy-001"
 * identifier[+].system.value = "AccessionNumber"
 * identifier[=].value = "1105192"
 

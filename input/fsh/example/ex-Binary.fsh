@@ -4,6 +4,6 @@ Title: "Binary example"
 Description: "Simple Binary example"
 Usage: #example
 
-* id = "ID-sample-ID"
+* id = "PHY-Binay-001"
 * contentType.value = "application/Pdf"
-* data.value = "aaaa=="
+* data.value = "IA=="

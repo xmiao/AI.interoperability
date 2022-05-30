@@ -4,7 +4,7 @@ Title: "Observation example"
 Description: "Observation example"
 Usage: #example
 
-* id = "ID-Observation-001"
+* id = "PHY-Observation-001"
 
 * status = #final
 
