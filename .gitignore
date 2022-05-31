@@ -12,4 +12,4 @@ www
 /_gencontinuous.sh
 /_genonce.bat
 /_updatePublisher.bat
-/_updatePublisher.sh
+#/_updatePublisher.sh
