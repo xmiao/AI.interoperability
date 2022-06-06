@@ -1,2 +1,2 @@
-Name     Type      File
-glasgow  Instance  instances/glasgow.fsh
+Name  Type      File
+ekg   Instance  instances/ekg.fsh

@@ -1,2 +1,1 @@
-Alias: $loinc = http://loinc.org
-Alias: $codes = http://acme.ec/codes
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category

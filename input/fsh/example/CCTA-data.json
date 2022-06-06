@@ -1,0 +1,110 @@
+[
+  {
+    "vessel": "LAD",
+    "section": "LM",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "LAD",
+    "section": "pLAD",
+    "straitness": "轻微狭窄",
+    "stent": false,
+    "plaque": [
+      "钙化斑块",
+      "混合斑块"
+    ]
+  },
+  {
+    "vessel": "LAD",
+    "section": "mLAD",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "LAD",
+    "section": "dLAD",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "D1",
+    "section": "D1",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "D2",
+    "section": "D2",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "LCX",
+    "section": "pCx",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "LCX",
+    "section": "LCx",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "OM1",
+    "section": "OM1",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "L-PLB",
+    "section": "L-PLB",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "RCA",
+    "section": "pRCA",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "RCA",
+    "section": "mRCA",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "RCA",
+    "section": "dRCA",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "R-PDA",
+    "section": "R-PDA",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  },
+  {
+    "vessel": "RI",
+    "section": "RI",
+    "straitness": "未见狭窄",
+    "stent": false,
+    "plaque": []
+  }
+]
