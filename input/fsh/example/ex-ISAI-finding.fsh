@@ -4,9 +4,10 @@ Title: "ISAI ImageStudy example"
 Description: "ISAI ImageStudy example"
 Usage: #example
 
-* status = #final
+* type = #imagingStudy
 
-// * observation[0]
-//   * category
-//     * coding
-      
+* entry[svcPatientEntry]
+  * resource = ex-Patient
+
+* entry[ob]
+  * resource = ex-Observation
