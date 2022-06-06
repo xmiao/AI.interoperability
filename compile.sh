@@ -1,2 +1,0 @@
-cd ..
-sushi AI.interoperability

@@ -2,28 +2,27 @@
 # ───────────────────────────────────────────────────
 id: philips.ai.interoperability
 canonical: https://philips.com/RAD/Philips/Philips.AI.Interoperability
-#version: 0.0.1-current
-#releaseLabel: trial-build
-#date: 2022-03-18
+version: 0.0.1-current
+releaseLabel: trial-build
+date: 2022-03-18
 name: PHILIPS_AI_INTEROPERABILITY
 title: "Philips AI Interoperability"
-status: draft
-#publisher:
-#  - name: Philips
-#  - url: http://www.philips.com
-#  - email: research@philips.com
-#contact:
-#  - name: IHE Radiology Technical Committee
-#    telecom:
-#      - system: email
-#        value: research@philips.com
+status: active
+publisher:
+  - name: Philips
+  - url: http://www.philips.com
+  - email: research@philips.com
+contact:
+  - name: IHE Radiology Technical Committee
+    telecom:
+      - system: email
+        value: research@philips.com
 description: Support AI Interoperability
 license:  Philips's license
-fhirVersion: 5.0.0-snapshot1
+fhirVersion: 4.0.1
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 copyright: TBD
 copyrightYear: 2022+
-releaseLabel: ci-build
 
 # parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #   path-resource:
