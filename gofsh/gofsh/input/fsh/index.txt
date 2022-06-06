@@ -1,2 +1,2 @@
-Name  Type      File
-ekg   Instance  instances/ekg.fsh
+Name     Type      File
+example  Instance  instances/example.fsh

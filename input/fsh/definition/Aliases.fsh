@@ -28,3 +28,4 @@ Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
 Alias: $codes = http://acme.ec/codes
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $DCM = http://dicom.nema.org/resources/ontology/DCM
