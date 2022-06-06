@@ -22,3 +22,4 @@ Description:    "ISAI Image study"
 * entry[ob]
   * resource 1..1 MS
   * resource only ISAIObservation2
+
