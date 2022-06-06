@@ -1,14 +1,12 @@
 Instance: ex-ImagingSelection
-InstanceOf: Observation
+InstanceOf: ImagingSelection
 Title: "ImagingSelection example"
 Description: "ImagingSelection example"
 Usage: #example
 
 * id = "PHY-ImagingSelection-001"
 
-* status = #draft
-
-// * code = #imagingSelection
+* code = #imagingSelection
 
 // * basedOn.reference = serviceRequest
 
