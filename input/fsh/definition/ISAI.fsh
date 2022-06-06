@@ -4,9 +4,9 @@ Alias: LOINC =  http://loinc.org
 Alias: DCMIdType = http://hl7.org/fhir/uv/dicom-sr/CodeSystem/dicom-identifier-type
 Alias: HL7IdType = http://terminology.hl7.org/CodeSystem/v2-0203
 
-Profile:        ISAIFindings
+Profile:        ISAIObservation
 Parent:         Observation
-Id:             isai-findings-test-1
+Id:             isai-observation
 Title:          "Observation - ISAI Findings based on observation" 
 Description:    "ISAI Finding HL7 profile"
 
