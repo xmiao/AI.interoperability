@@ -1,0 +1,71 @@
+@startuml
+title "The demo scenario"
+skinparam maxMessageSize 150
+scale 800 width
+
+'/*
+'优先级和参与者有关。
+'Actors:
+'----------
+'Report Creator ?
+'Report Reader ?
+'Rendered Report Reader ?
+'Report Repository ?
+'Image Manager/Image Archive
+'Image Display
+'Image Display Invoker
+'Evidence Creator
+'Evidence Moderator ? <- ISAI
+'*/
+
+actor "User" as U
+participant "Report Creator\n//RIS//" as R
+participant "Image Creator\n//Modality//" as M
+participant "Image Manager/Archive\n//PACS//" as P
+participant "Evidence Moderator\n//ISAI//" as I
+participant "Evidence Creator\n//3rd party//\n//algorithms//" as S
+
+U -> R: 1. patient registration
+group Patient flow optimization
+R -> I++: 2. patient registration
+return 3. propose worklist
+R -> M: 5. send worklist
+end
+
+M -> M: 6. image acquisition
+M -> P: 7. send DICOM images
+P -> R++: 8. notify image acquisition completed
+return
+group AI orchestration
+P -> I: 9. notify image acquisition completed
+
+I -> I: 10. Filtering for notification based on supported modality type and body part
+note over S
+algorithms from
+AI vendors
+end note
+I --> S: ? start AI instance
+I -> P++: 11. DICOM Q/R images
+return
+I -> S++: 12. AI application execution
+return
+return ? tear down AI instance
+end
+I -> R: 13. update AI execution progress
+
+group Interactive verification
+I -> R++: <font color="darkgreen">15. send AI result
+R -> U++: (show result)
+note over R
+User verify the result
+by choosing accept/reject
+on AI result dashboard
+end note
+return (accept/reject)
+return 17. Send the confirmed result
+I -> S++: 18. Send the confirmed results to algorithms(key image/json)
+return
+I -> P++: 19. Store the AI-processed result images
+return
+end
+@enduml

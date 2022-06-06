@@ -1,0 +1,63 @@
+@startuml
+title "Seuqnce Diagram by Felicity"
+
+skinparam maxMessageSize 150
+scale 500 width
+
+participant "RIS" as R
+participant "Modality" as M
+participant "PACS" as P
+participant "ISAI" as I
+participant "SMIT SR" as S
+
+activate R
+ -> R: 1. patient registration
+activate I
+R -> I: 2. patient registration（VDO)
+deactivate I
+activate M
+R -> M: 3. send worklist
+deactivate R
+M -> M: 4. image acquisition
+activate P
+M -> P: 5. send DICOM images
+deactivate M
+activate R
+P -> R: 6. notify image acquisition completed
+deactivate R
+activate I
+P -> I: 7. notify image acquisition completed(VDO)
+
+I -> I: 8. Filtering for notification based on supported modality type and body part
+
+group
+P <- I: 9. DICOM Q/R images
+P -> I:
+deactivate P
+I -> I: 10. AI application execution (algorithm provided by AI vendors with docker image）
+activate R
+I -> R: 11. send AI execution running status
+R -> I: 12. confirm results by invoking the ISAI result audit dashboard
+deactivate R
+activate S
+I -> S: 13. send the confirmed results(key image/json)
+activate P
+I -> P: 14. send the AI-processed images
+end
+
+@enduml
+
+/*
+优先级和参与者有关。
+Actors:
+----------
+Report Creator ?
+Report Reader ?
+Rendered Report Reader ?
+Report Repository ?
+Image Manager/Image Archive
+Image Display
+Image Display Invoker
+Evidence Creator
+Evidence Moderator ? <- ISAI
+*/

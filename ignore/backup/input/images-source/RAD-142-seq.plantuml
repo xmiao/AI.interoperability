@@ -1,0 +1,14 @@
+@startuml
+
+hide footbox
+
+participant "Display" as Reader
+participant "//'User'//" as User
+
+activate Reader
+activate User
+Reader->User: Display Multimedia Report
+deactivate User
+deactivate Reader
+
+@enduml

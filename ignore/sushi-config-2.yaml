@@ -1,0 +1,72 @@
+# sushi-config.yaml is documented https://fshschool.org/docs/sushi/configuration/
+# ───────────────────────────────────────────────────
+id: philips.ai.interoperability
+canonical: https://philips.com/RAD/Philips/Philips.AI.Interoperability
+version: 0.0.1-current
+releaseLabel: trial-build
+date: 2022-03-18
+name: PHILIPS_AI_INTEROPERABILITY
+title: "Philips AI Interoperability"
+status: active
+publisher:
+  - name: Philips
+  - url: http://www.philips.com
+  - email: research@philips.com
+contact:
+  - name: IHE Radiology Technical Committee
+    telecom:
+      - system: email
+        value: research@philips.com
+description: Support AI Interoperability
+license:  Philips's license
+fhirVersion: 4.0.1
+jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
+copyright: TBD
+copyrightYear: 2022+
+
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+    - input/examples
+#  path-pages:
+#    - input/pagecontent
+#    - fsh-generated/includes
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'false'
+  logging: progress
+  shownav: 'true'
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+
+resources:
+# list every example here with a name, description and that exampleBoolean is true; These are used to populate the artifacts page, and are needed to eliminate build warnings 
+# You may delay filling out this section until you approach publication as it is merely a nice to have and eliminates build warnings -- If you do this then you will need above the autoload-resources true
+
+
+pages:
+# itemize here each narrative page. Include assigned section numbers when appropriate
+  index.md:
+    title: 1:52. IMR Home
+    generation: markdown
+  testplan.md:
+    title: "Test Plan"
+    generation: markdown
+  issues.md:
+    title: Open and Closed issues
+    generation: markdown
+  other.md:
+    title: Changes to Other Documents
+    generation: markdown
+
+menu:
+  IMR Home: index.html
+  Volume 1:
+    Introduction: volume-1.html
+    "Display Referenced Images in Multimedia Report [RAD-145]": RAD-145.html
+  Test Plan: testplan.html
+  Artifacts: artifacts.html
+  Other: other.html
