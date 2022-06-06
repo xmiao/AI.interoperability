@@ -6,7 +6,7 @@ Description:    "AIR AI Result profile on Bundle"
 
 * . MS
 * . ^short = "Smart Vaccination Certificate Bundle"
-* entry 3.. MS
+* entry 1.. MS
 * entry ^slicing.discriminator[0].type = #value
 * entry ^slicing.discriminator[0].path = "resource"
 * entry ^slicing.rules = #closed

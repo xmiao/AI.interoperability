@@ -8,8 +8,8 @@ Usage: #example
 
 * entry[svcPatientEntry].resource = ex-Patient
 * entry[+].resource = ex-Composition
-* entry[+].resource = ex-Organization
-* entry[+].resource = ex-ImagingStudy
-* entry[+].resource = ex-Observation
-* entry[+].resource = ex-Binary
+//* entry[+].resource = ex-Organization
+//* entry[+].resource = ex-ImagingStudy
+//* entry[+].resource = ex-Observation
+//* entry[+].resource = ex-Binary
 * entry[+].resource = ex-ImagingSelection
