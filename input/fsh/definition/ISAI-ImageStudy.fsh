@@ -4,11 +4,6 @@ Id:             isai-imaging-study
 Title:          "Image study - ISAI study"
 Description:    "ISAI Image study"
 
-//* entry ^slicing.discriminator[0].type = #value
-//* entry ^slicing.discriminator[0].path = "resource"
-//* entry ^slicing.rules = #closed
-//* entry ^slicing.ordered = true
-
 * entry
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "type"
@@ -26,4 +21,4 @@ Description:    "ISAI Image study"
 
 * entry[ob]
   * resource 1..1 MS
-  * resource only Observation
+  * resource only ISAIObservation2
