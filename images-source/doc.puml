@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object ISAI {
+    bodySite : BodySite
+    finding : Finding
+}
+
+object Observation {
+    code : CodeableConcept
+    valueQuantity : Quantity
+}
+
+
+
+'object Washington
+'object Berlin
+'object NewYork
+
+map CapitalCity {
+' UK *-> London
+' USA *--> Washington
+' Germany *---> Berlin
+}
+
+NewYork --> CapitalCity::USA
+@enduml
