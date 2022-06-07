@@ -6,6 +6,8 @@ Usage: #example
 
 * type = #imagingStudy
 
+
+
 * entry[isaiPatient]
   * resource = ex-Patient
 
@@ -16,4 +18,14 @@ Usage: #example
 
     * bodySite = $sct#71341001:272741003=7771000
       * text = "Left Femur"
+    // * component
+      
+      
 
+
+//  * category.coding.system.value = "ObservationType"
+//  * category.coding.code.value = "AlgorithmResult"
+
+//  * code.coding.system.value = "ContentType"
+//  * code.coding.code.value = "application/json"
+//  * valueString.value = "the value in json format ..."
