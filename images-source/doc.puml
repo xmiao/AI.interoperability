@@ -1,6 +1,8 @@
 @startuml
 'https://plantuml.com/object-diagram
 
+scale 500 width
+
 object DiagnosticReport {
     identifier : Identifier
     basedOn : Reference
@@ -26,13 +28,6 @@ object DiagnosticReport {
     link : Reference [1..1]
 }
 
-object Findings {
-    code : CodeableConcept
-    valueQuantity : Quantity
-}
-
-
-
 object Observation{
     identifier : Identifier
     instantiates[x] : DataType [0..1]
@@ -47,11 +42,11 @@ object Observation{
     effective[x] : DataType [0..1]
     issued : instant [0..1]
     performer : Reference
-    value[x] : DataType [0..1]
+    <b><color brown>value[x] : DataType [0..1]</color></b>
     dataAbsentReason : CodeableConcept [0..1]
     interpretation : CodeableConcept
     note : Annotation
-    bodySite : CodeableConcept [0..1]
+    <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
     method : CodeableConcept [0..1]
     specimen : Reference [0..1]
     device : Reference [0..1]
@@ -66,8 +61,31 @@ object Observation{
     text : string [0..1]
 }
 
-Observation::X1 "1" -> "1" Findings::code
-DiagnosticReport::result "1" <--* "N" Observation
+package {
+    object BodySite {
+
+    }
+
+    object Component {
+        code : CodeableConcept [1..1]
+        value[x] : DataType [0..1]
+        dataAbsentReason : CodeableConcept [0..1]
+        interpretation : CodeableConcept [0..*]
+    }
+
+    object Findings {
+        code : CodeableConcept
+        valueQuantity : Quantity
+    }
+
+}
+
+
+
+Observation::X1 "1" -right-> "1" Findings::code
+DiagnosticReport::result "1" <-* "N" Observation
+Observation::value -> Component
+Observation::bodySite --> BodySite
 
 'map CapitalCity {
 'DiagnosticReport *-> DiagnosticReport
