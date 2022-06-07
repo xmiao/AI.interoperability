@@ -31,7 +31,6 @@ object Findings {
     valueQuantity : Quantity
 }
 
-DiagnosticReport::X1 "1" -> "1" Findings::code
 
 
 object Observation{
@@ -41,7 +40,7 @@ object Observation{
     partOf : Reference
     status : code [1..1]
     category : CodeableConcept
-    code : CodeableConcept [1..1]
+    <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
     subject : Reference [0..1]
     focus : Reference
     encounter : Reference [0..1]
@@ -67,12 +66,15 @@ object Observation{
     text : string [0..1]
 }
 
-map CapitalCity {
-DiagnosticReport *-> DiagnosticReport
-' UK *-> London
-' USA *--> Washington
-' Germany *---> Berlin
-}
+Observation::X1 "1" -> "1" Findings::code
+DiagnosticReport::result "1" <--* "N" Observation
 
-NewYork --> CapitalCity::USA
+'map CapitalCity {
+'DiagnosticReport *-> DiagnosticReport
+'' UK *-> London
+'' USA *--> Washington
+'' Germany *---> Berlin
+'}
+
+'NewYork --> CapitalCity::USA
 @enduml
