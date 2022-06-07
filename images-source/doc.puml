@@ -1,16 +1,15 @@
 @startuml PERT
 'https://plantuml.com/object-diagram
 
-'scale 1/2
 scale 800 width
-
 left to right direction
+
 object DiagnosticReport {
     identifier : Identifier
     basedOn : Reference
     status : code [1..1]
     category : CodeableConcept
-    <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+  + <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
     subject : Reference [0..1]
     encounter : Reference [0..1]
     effective[x] : DataType [0..1]
@@ -18,7 +17,7 @@ object DiagnosticReport {
     performer : Reference
     resultsInterpreter : Reference
     specimen : Reference
-    <b><color brown>result : Reference</color></b>
+  + <b><color brown>result : Reference</color></b>
     note : Annotation
     imagingStudy : Reference
     composition : Reference [0..1]
@@ -37,18 +36,18 @@ object Observation{
     partOf : Reference
     status : code [1..1]
     category : CodeableConcept
-    <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+  +  <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
     subject : Reference [0..1]
     focus : Reference
     encounter : Reference [0..1]
     effective[x] : DataType [0..1]
     issued : instant [0..1]
     performer : Reference
-    <b><color brown>value[x] : DataType [0..1]</color></b>
+  +  <b><color brown>value[x] : DataType [0..1]</color></b>
     dataAbsentReason : CodeableConcept [0..1]
     interpretation : CodeableConcept
     note : Annotation
-    <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
+  +  <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
     method : CodeableConcept [0..1]
     specimen : Reference [0..1]
     device : Reference [0..1]
@@ -63,35 +62,25 @@ object Observation{
     text : string [0..1]
 }
 
-'package {
-    object BodySite {
+object BodySite {
 
-    }
+}
 
-    object Component {
-        code : CodeableConcept [1..1]
-        value[x] : DataType [0..1]
-        dataAbsentReason : CodeableConcept [0..1]
-        interpretation : CodeableConcept [0..*]
-    }
+object Component {
+    code : CodeableConcept [1..1]
+    value[x] : DataType [0..1]
+    dataAbsentReason : CodeableConcept [0..1]
+    interpretation : CodeableConcept [0..*]
+}
 
-    object Findings {
-        code : CodeableConcept
-        valueQuantity : Quantity
-    }
-'}
+object Findings {
+    code : CodeableConcept
+    valueQuantity : Quantity
+}
 
 DiagnosticReport::result "1" *-- "N" Observation
 Observation::X1 "1" --> "1" Findings::code
-Observation::value --> Component
 Observation::bodySite --> BodySite
+Observation::value --> Component
 
-'map CapitalCity {
-'DiagnosticReport *-> DiagnosticReport
-'' UK *-> London
-'' USA *--> Washington
-'' Germany *---> Berlin
-'}
-
-'NewYork --> CapitalCity::USA
 @enduml
