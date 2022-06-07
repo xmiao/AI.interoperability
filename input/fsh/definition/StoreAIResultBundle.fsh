@@ -13,10 +13,10 @@ Description:    "AIR AI Result profile on Bundle"
 * entry ^slicing.ordered = true
 
 * entry contains
-  svcPatientEntry 1..1 MS
+  isaiPatient 1..1 MS
 
-* entry[svcPatientEntry].resource 1..1 MS
-* entry[svcPatientEntry].resource only PPatient
+* entry[isaiPatient].resource 1..1 MS
+* entry[isaiPatient].resource only PPatient
 
 //* entry[DiagnosticReport].resource only DiagnosticReport
 //* entry[DiagnosticReport] ^short = "the DiagnosticReport"

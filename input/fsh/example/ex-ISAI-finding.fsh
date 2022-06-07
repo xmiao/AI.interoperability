@@ -6,7 +6,7 @@ Usage: #example
 
 * type = #imagingStudy
 
-* entry[svcPatientEntry]
+* entry[isaiPatient]
   * resource = ex-Patient
 
 * entry[ob]

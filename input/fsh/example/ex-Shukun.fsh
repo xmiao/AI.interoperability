@@ -6,7 +6,7 @@ Usage: #example
 
 * type = #document
 
-* entry[svcPatientEntry].resource = ex-Patient
+* entry[isaiPatient].resource = ex-Patient
 * entry[+].resource = ex-Composition
 //* entry[+].resource = ex-Organization
 //* entry[+].resource = ex-ImagingStudy

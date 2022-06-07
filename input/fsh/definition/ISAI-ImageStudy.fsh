@@ -12,10 +12,10 @@ Description:    "ISAI Image study"
   * ^slicing.description = "Identifiers for the measurement group"
 
 * entry contains
-    svcPatientEntry 1..* MS and
+    isaiPatient 1..* MS and
     ob 1..* MS
 
-* entry[svcPatientEntry]
+* entry[isaiPatient]
   * resource 1..1 MS
   * resource only PPatient
 
