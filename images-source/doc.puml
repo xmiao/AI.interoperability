@@ -1,23 +1,74 @@
 @startuml
 'https://plantuml.com/object-diagram
 
-object ISAI {
-    bodySite : BodySite
-    finding : Finding
+object DiagnosticReport {
+    identifier : Identifier
+    basedOn : Reference
+    status : code [1..1]
+    category : CodeableConcept
+    <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+    subject : Reference [0..1]
+    encounter : Reference [0..1]
+    effective[x] : DataType [0..1]
+    issued : instant [0..1]
+    performer : Reference
+    resultsInterpreter : Reference
+    specimen : Reference
+    <b><color brown>result : Reference</color></b>
+    note : Annotation
+    imagingStudy : Reference
+    composition : Reference [0..1]
+    conclusion : string [0..1]
+    conclusionCode : CodeableConcept
+    presentedForm : Attachment
+    Media
+    comment : string [0..1]
+    link : Reference [1..1]
 }
 
-object Observation {
+object Findings {
     code : CodeableConcept
     valueQuantity : Quantity
 }
 
+DiagnosticReport::X1 "1" -> "1" Findings::code
 
 
-'object Washington
-'object Berlin
-'object NewYork
+object Observation{
+    identifier : Identifier
+    instantiates[x] : DataType [0..1]
+    basedOn : Reference
+    partOf : Reference
+    status : code [1..1]
+    category : CodeableConcept
+    code : CodeableConcept [1..1]
+    subject : Reference [0..1]
+    focus : Reference
+    encounter : Reference [0..1]
+    effective[x] : DataType [0..1]
+    issued : instant [0..1]
+    performer : Reference
+    value[x] : DataType [0..1]
+    dataAbsentReason : CodeableConcept [0..1]
+    interpretation : CodeableConcept
+    note : Annotation
+    bodySite : CodeableConcept [0..1]
+    method : CodeableConcept [0..1]
+    specimen : Reference [0..1]
+    device : Reference [0..1]
+    hasMember : Reference
+    derivedFrom : Reference
+    ReferenceRange
+    low : Quantity(SimpleQuantity) [0..1]
+    high : Quantity(SimpleQuantity) [0..1]
+    type : CodeableConcept [0..1]
+    appliesTo : CodeableConcept
+    age : Range [0..1]
+    text : string [0..1]
+}
 
 map CapitalCity {
+DiagnosticReport *-> DiagnosticReport
 ' UK *-> London
 ' USA *--> Washington
 ' Germany *---> Berlin

@@ -1,2 +1,0 @@
-Name     Type      File
-example  Instance  instances/example.fsh
