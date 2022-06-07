@@ -1,8 +1,10 @@
-@startuml
+@startuml PERT
 'https://plantuml.com/object-diagram
 
-scale 500 width
+'scale 1/2
+scale 800 width
 
+left to right direction
 object DiagnosticReport {
     identifier : Identifier
     basedOn : Reference
@@ -61,7 +63,7 @@ object Observation{
     text : string [0..1]
 }
 
-package {
+'package {
     object BodySite {
 
     }
@@ -77,14 +79,11 @@ package {
         code : CodeableConcept
         valueQuantity : Quantity
     }
+'}
 
-}
-
-
-
-Observation::X1 "1" -right-> "1" Findings::code
-DiagnosticReport::result "1" <-* "N" Observation
-Observation::value -> Component
+DiagnosticReport::result "1" *-- "N" Observation
+Observation::X1 "1" --> "1" Findings::code
+Observation::value --> Component
 Observation::bodySite --> BodySite
 
 'map CapitalCity {
