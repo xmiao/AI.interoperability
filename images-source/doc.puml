@@ -31,23 +31,23 @@ object DiagnosticReport {
 
 object Observation{
     identifier : Identifier
+  +  <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+  +  <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
+  +  <b><color brown>value[x] : DataType [0..1]</color></b>
     instantiates[x] : DataType [0..1]
     basedOn : Reference
     partOf : Reference
     status : code [1..1]
     category : CodeableConcept
-  +  <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
     subject : Reference [0..1]
     focus : Reference
     encounter : Reference [0..1]
     effective[x] : DataType [0..1]
     issued : instant [0..1]
     performer : Reference
-  +  <b><color brown>value[x] : DataType [0..1]</color></b>
     dataAbsentReason : CodeableConcept [0..1]
     interpretation : CodeableConcept
     note : Annotation
-  +  <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
     method : CodeableConcept [0..1]
     specimen : Reference [0..1]
     device : Reference [0..1]
@@ -66,21 +66,43 @@ object BodySite {
 
 }
 
-object Component {
+object Component1 {
     code : CodeableConcept [1..1]
     value[x] : DataType [0..1]
     dataAbsentReason : CodeableConcept [0..1]
     interpretation : CodeableConcept [0..*]
 }
 
-object Findings {
-    code : CodeableConcept
-    valueQuantity : Quantity
+object Component2 {
+    code : CodeableConcept [1..1]
+    value[x] : DataType [0..1]
+    dataAbsentReason : CodeableConcept [0..1]
+    interpretation : CodeableConcept [0..*]
+}
+
+object Component3 {
+    code : CodeableConcept [1..1]
+    value[x] : DataType [0..1]
+    dataAbsentReason : CodeableConcept [0..1]
+    interpretation : CodeableConcept [0..*]
+}
+
+object ValueSet {
+    code : $sct#251015000 "Coronary artery finding"
+}
+
+<> d1
+
+object ValueSet2{
+    bodySite: $sct#67734004 "Upper Trunk Structure"
 }
 
 DiagnosticReport::result "1" *-- "N" Observation
-Observation::X1 "1" --> "1" Findings::code
-Observation::bodySite --> BodySite
-Observation::value --> Component
+Observation::X1 "1" --> "1" ValueSet::code
+Observation::bodySite --> ValueSet2
+Observation::value --> d1
+d1 -> Component1
+d1 -> Component2
+d1 -> Component3
 
 @enduml
