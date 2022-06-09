@@ -15,3 +15,6 @@ Usage: #example
 * code = $sct#251015000 "Coronary artery finding"
 
 * bodySite = $sct#71341001:272741003=7771000 "body site"
+
+* derivedFrom = Reference(ImageStudy/ex-ImagingStudy-PHY)
+

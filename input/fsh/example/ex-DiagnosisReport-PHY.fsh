@@ -8,4 +8,4 @@ Usage: #example
 
 * status = #available
 
-* result = Reference(Observation/ex-Observation-bmd)
+* result = Reference(Observation/ex-Observation-Coronary-001)
