@@ -18,4 +18,4 @@ Usage: #example
   * instance
     * uid = "2.16.124.113543.6003.189642796.63084.16748.2599092903"
     * sopClass = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.2
-  * instance.number = 1
+    * number = 1
