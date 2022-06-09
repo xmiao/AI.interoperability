@@ -2,6 +2,9 @@
 'https://plantuml.com/object-diagram
 
 scale 800 width
+hide @unlinked
+
+
 left to right direction
 
 object DiagnosticReport {
@@ -28,6 +31,17 @@ object DiagnosticReport {
     comment : string [0..1]
     link : Reference [1..1]
 }
+note left
+    If you have a highly structured
+    report, then use DiagnosticReport
+end note
+
+DiagnosticReport::basedOn -- Procedure
+
+object ImagingStudy{
+
+}
+
 
 object Observation{
     identifier : Identifier
@@ -61,6 +75,7 @@ object Observation{
     age : Range [0..1]
     text : string [0..1]
 }
+
 
 object BodySite {
 
@@ -97,12 +112,12 @@ object ValueSet2{
     bodySite: $sct#67734004 "Upper Trunk Structure"
 }
 
-DiagnosticReport::result "1" *-- "N" Observation
-Observation::X1 "1" --> "1" ValueSet::code
-Observation::bodySite --> ValueSet2
-Observation::value --> d1
-d1 -> Component1
-d1 -> Component2
-d1 -> Component3
+DiagnosticReport::result o--- "1..*" Observation
+Observation::X1 "1" ---> "1" ValueSet::code
+Observation::bodySite ---> ValueSet2
+Observation::value ---> d1
+d1 ---> Component1
+d1 ---> Component2
+d1 ---> Component3
 
 @enduml
