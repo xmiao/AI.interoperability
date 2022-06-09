@@ -8,5 +8,4 @@ Usage: #example
 * subject = Reference(Patient/dicom)
 * occurrenceDateTime = "2013-05-08T09:33:27+07:00"
 * requester = Reference(Practitioner/example) "Dr. Adam Careful"
-* reasonCode
-    * text = "Check for metastatic disease"
+//* reasonCode.text = "Check for metastatic disease"
