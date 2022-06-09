@@ -31,9 +31,9 @@ object DiagnosticReport {
     comment : string [0..1]
     link : Reference [1..1]
 }
-note left
-    If you have a highly structured
-    report, then use DiagnosticReport
+note bottom
+  for highly structured report,
+    otherwise, use composition
 end note
 
 DiagnosticReport::basedOn -- Procedure
