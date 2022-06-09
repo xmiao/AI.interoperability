@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Doctor" as doctor
+actor "Patient" as patient
+actor "Nurse" as nurse
+actor "Pharmacist" as pharmacist
+actor "Radiologist" as radiologist
+actor "X-Ray Technician" as xraytechnician
+actor "Cardiologist" as cardiologist
+actor "Surgeon" as surgeon
+actor "Anesthesiologist" as anesthesiologist
+actor "Pathologist" as pathologist
+actor "Psychiatrist" as psychiatrist
+actor "Third Party" as thirdparty
+actor "AI algorithm" as aialgorithm
+
+hide @unlinked
+
+
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+@enduml
