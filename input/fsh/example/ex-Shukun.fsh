@@ -7,7 +7,8 @@ Usage: #example
 * type = #document
 
 * entry[isaiPatient].resource = ex-Patient
-* entry[+].resource = ex-Composition
+
+* entry[0].resource = ex-Composition
 //* entry[+].resource = ex-Organization
 //* entry[+].resource = ex-ImagingStudy
 //* entry[+].resource = ex-Observation
