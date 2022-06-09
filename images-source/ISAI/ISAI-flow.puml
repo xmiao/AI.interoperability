@@ -1,6 +1,8 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
+skinparam maxMessageSize 150
+scale 500 width
 autonumber
 
 actor "Patient" as patient
@@ -22,17 +24,39 @@ participant PACS as PACS
 participant EMR as EMR
 participant ISAI as ISAI
 
+participant "RIS" as R
+participant "Modality" as M
+participant "PACS" as P
+participant "ISAI" as I
+participant "SMIT SR" as S
+
 
 hide @unlinked
 
-group CTA
+'group CTA
+'patient -> doctor: I need a doctor
+'cardiologist -> pathologist:
+'end
 
-patient -> doctor: I need a doctor
-cardiologist -> pathologist:
+ -> R: patient\nregistration
+R -> I: 2. patient registration（VDO)
+R -> M: 3. send worklist
+M -> M: 4. image acquisition
+M -> P: 5. send DICOM images
+P -> R: 6. notify image acquisition completed
+P -> I: 7. notify image acquisition completed(VDO)
 
+I -> I: 8. Filtering for notification based on supported modality type and body part
+
+group
+    P <- I: 9. DICOM Q/R images
+    P -> I:
+    I -> I: 10. AI application execution (algorithm provided by AI vendors with docker image）
+    I -> R: 11. send AI execution running status
+    R -> I: 12. confirm results by invoking the ISAI result audit dashboard
+    I -> S: 13. send the confirmed results(key image/json)
+    I -> P: 14. send the AI-processed images
 end
-
-
 
 
 @enduml
