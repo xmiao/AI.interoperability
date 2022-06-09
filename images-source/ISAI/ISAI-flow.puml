@@ -38,8 +38,11 @@ hide @unlinked
 'cardiologist -> pathologist:
 'end
 
- -> R: patient\nregistration
-R -> I: patient registration（VDO)
+ -> R: patient\nregistration\ninformation
+
+'R -> I++: patient registration（VDO)
+'return worklist
+
 R -> M: send worklist
 M -> M: image acquisition
 M -> P: send DICOM images
