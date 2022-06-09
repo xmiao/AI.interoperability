@@ -1,4 +1,4 @@
-Instance: imagestudy
+Instance: imagestudy-1
 InstanceOf: ImagingStudy
 Usage: #example
 * identifier.system = "urn:dicom:uid"

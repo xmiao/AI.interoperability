@@ -1,7 +1,7 @@
 @startuml PERT
 'https://plantuml.com/object-diagram
 
-scale 800 width
+scale 600 height
 hide @unlinked
 
 
@@ -37,6 +37,7 @@ note bottom
 end note
 
 DiagnosticReport::basedOn -- Procedure
+DiagnosticReport::result o--- "1..*" Observation
 
 object ImagingStudy{
 
@@ -81,6 +82,12 @@ object BodySite {
 
 }
 
+note bottom
+  The BodyStructure resource is
+  an immature resource with an
+  FMM level of 1
+end note
+
 object Component1 {
     code : CodeableConcept [1..1]
     value[x] : DataType [0..1]
@@ -112,7 +119,6 @@ object ValueSet2{
     bodySite: $sct#67734004 "Upper Trunk Structure"
 }
 
-DiagnosticReport::result o--- "1..*" Observation
 Observation::X1 "1" ---> "1" ValueSet::code
 Observation::bodySite ---> ValueSet2
 Observation::value ---> d1
