@@ -3,8 +3,8 @@
 
 autonumber
 
-actor "Doctor" as doctor
 actor "Patient" as patient
+actor "Doctor" as doctor
 actor "Nurse" as nurse
 actor "Pharmacist" as pharmacist
 actor "Radiologist" as radiologist
@@ -15,14 +15,24 @@ actor "Anesthesiologist" as anesthesiologist
 actor "Pathologist" as pathologist
 actor "Psychiatrist" as psychiatrist
 actor "Third Party" as thirdparty
-actor "AI algorithm" as aialgorithm
+actor "AI algorithm" as ai
+
+participant RIS as RIS
+participant PACS as PACS
+participant EMR as EMR
+participant ISAI as ISAI
+
 
 hide @unlinked
 
+group CTA
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+patient -> doctor: I need a doctor
+cardiologist -> pathologist:
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+end
+
+
+
+
 @enduml
