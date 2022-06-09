@@ -1,8 +1,8 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-skinparam maxMessageSize 150
-scale 500 width
+skinparam maxMessageSize 250
+scale 800 width
 autonumber
 
 actor "Patient" as patient
@@ -28,7 +28,7 @@ participant "RIS" as R
 participant "Modality" as M
 participant "PACS" as P
 participant "ISAI" as I
-participant "SMIT SR" as S
+participant "AI algorithm" as S
 
 
 hide @unlinked
@@ -46,17 +46,48 @@ hide @unlinked
 R -> M: send worklist
 M -> M: image acquisition
 M -> P: send DICOM images
-P -> R: notify image acquisition completed
-P -> I: notify image acquisition completed(VDO)
+P++
+P -[dotted]-> R: notify image acquisition completed
 
-I -> I: Filtering for notification based on supported modality type and body part
 
-group
-    P <- I: DICOM Q/R images
-    P -> I:
-    I -> I: AI application execution (algorithm provided by AI vendors with docker image）
-    I -> R: send AI execution running status
-    R -> I: confirm results by invoking the ISAI result audit dashboard
+group ISAI
+    note over I
+    * ISAI will:
+    - generate a list of AI requests
+    - send AI requests to AI servers
+    - receive AI responses
+    end note
+
+    P -> I++: notify image ready
+    P--
+
+    I -> I: AI algorithm orchestration
+    note over I
+    * Identify AI request based on:
+    - orders from physician (e.g. CT, MRI, PET)
+    - pre-set rules, such as:
+      - patient age, risk factors, etc.
+      - body parts / modality
+    end note
+
+    I -> P++: DICOM Q/R images
+    note over I
+    * potentially load more patient data from EMR
+    end note
+    return DICOM images
+
+    I -> S++: starty AI algorithm
+    I -[dotted]-> R: AI algorithm running status
+    S -> S: AI application execution\n(algorithm provided by AI vendors with docker image）
+    return AI algorithm results
+    I -> R++: send AI execution result
+    note over R
+    Physician receive AI execution result
+    review the AI result, and decide whether
+    to accept or reject the result.
+    end note
+    ...
+    return The confirmation from the physician
     I -> S: send the confirmed results(key image/json)
     I -> P: send the AI-processed images
 end

@@ -1,6 +1,7 @@
 @startuml
-skinparam maxMessageSize 150
-scale 500 width
+title Flow of ISAI
+skinparam maxMessageSize 250
+'scale 000 width
 
 participant "RIS" as R
 participant "Modality" as M
@@ -12,20 +13,51 @@ R -> M++: Worklist
 loop
 M -> M: Scan
 M -> I++: Request for AI algorithm
+note over I
+通过配置，调度一个或多个算法。
+算法的例子：
+* image quality control
+* patient acute conditions
+* coronary stenosis
+end note
 I -> M++: load image
 return
-group Algorithm
+
+group Algorithm 1: CTA Quantification of stenotic lesion
 I -> S ++: Start AI algorithm
 S -> S: calculation
 return AI result / Findings
 end
+
+note over I
+* result standardization
+* react based on result interpretation
+- inform radiologist
+    after image quality control
+    on patient acute conditions
+* ？算法调度: 计算资源的合理利用（错峰、分布式、优先级评估）
+* ？算法调度+可靠性: 尽早结束有问题算法，防止算法运行时间过长
+* ？时效性+可控性：保证算法在指定时间内完成
+* ？算法结果的统一：统一算法的结果，便于后续的处理
+* ？算法结果的可视化/报告/呈现：算法结果的可视化，便于识别异常事件
+end note
+
+group Algorithm 2: CT fractional flow reserve
+I -> Algorithm2 ++: Start AI algorithm
+Algorithm2 -> Algorithm2: calculation
+return AI result / Findings
+end
+
+note over I
+* aggregate results from AI algorithms
+* ？CDSS
+* ? Framework for AI
+end note
+
 return Algorithm result
 note over M
-User interactively
-manipulate the
-image.
-The final result is
-saved to PACS.
+User interactively manipulate the image.
+The final result is saved to PACS.
 end note
 end
 return AI Result / Structural report
