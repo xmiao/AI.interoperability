@@ -39,23 +39,23 @@ hide @unlinked
 'end
 
  -> R: patient\nregistration
-R -> I: 2. patient registration（VDO)
-R -> M: 3. send worklist
-M -> M: 4. image acquisition
-M -> P: 5. send DICOM images
-P -> R: 6. notify image acquisition completed
-P -> I: 7. notify image acquisition completed(VDO)
+R -> I: patient registration（VDO)
+R -> M: send worklist
+M -> M: image acquisition
+M -> P: send DICOM images
+P -> R: notify image acquisition completed
+P -> I: notify image acquisition completed(VDO)
 
-I -> I: 8. Filtering for notification based on supported modality type and body part
+I -> I: Filtering for notification based on supported modality type and body part
 
 group
-    P <- I: 9. DICOM Q/R images
+    P <- I: DICOM Q/R images
     P -> I:
-    I -> I: 10. AI application execution (algorithm provided by AI vendors with docker image）
-    I -> R: 11. send AI execution running status
-    R -> I: 12. confirm results by invoking the ISAI result audit dashboard
-    I -> S: 13. send the confirmed results(key image/json)
-    I -> P: 14. send the AI-processed images
+    I -> I: AI application execution (algorithm provided by AI vendors with docker image）
+    I -> R: send AI execution running status
+    R -> I: confirm results by invoking the ISAI result audit dashboard
+    I -> S: send the confirmed results(key image/json)
+    I -> P: send the AI-processed images
 end
 
 
