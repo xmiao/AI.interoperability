@@ -6,8 +6,6 @@ Usage: #example
 
 // https://hl7.org/fhir/5.0.0-snapshot1/observation-example-bmd.json.html
 
-* id = "PHY-BMD-001"
-
 * text
   * status = #generated
   * div = "<div>...ok...</div>"

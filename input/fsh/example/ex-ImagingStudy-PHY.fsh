@@ -4,7 +4,6 @@ Title: "ImagingStudy example"
 Description: "ImagingStudy example"
 Usage: #example
 
-* id = "PHY-ImagingStudy-001"
 * identifier
   * system = "AccessionNumber"
   * value = "1105192"

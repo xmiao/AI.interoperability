@@ -12,4 +12,5 @@ Usage: #example
 //* entry[+].resource = ex-ImagingStudy
 //* entry[+].resource = ex-Observation
 //* entry[+].resource = ex-Binary
-* entry[+].resource = ex-ImagingSelection
+* entry[+].resource = ex-DiagnosticReport-PHY
+* entry[+].resource = ex-Observation-bmd
