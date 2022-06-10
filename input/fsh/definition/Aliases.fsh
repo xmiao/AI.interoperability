@@ -40,3 +40,6 @@ Alias: $apgarmuscletone = http://acme.ped/apgarmuscletone
 Alias: $apgarrespiratoryeffort = http://acme.ped/apgarrespiratoryeffort
 Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $acme-rehab = http://acme-rehab.org
+Alias: $phy = http://philips.com/terminology/isai/v1
+
+

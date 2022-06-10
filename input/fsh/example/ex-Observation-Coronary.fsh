@@ -18,4 +18,19 @@ Usage: #example
 * component[0]
   * code = $sct#386139002	"Stenotic"
   * valueCodeableConcept
-    * coding = $sct#386139002	"Stenotic"
+    * coding = $phy#1000	"轻度狭窄"
+
+* component[+]
+  * code = $sct#386139002	"-支架"
+  * valueCodeableConcept
+    * coding = $phy#1001	"-无"
+
+* component[+]
+  * code = $sct#386139002	"-斑块"
+  * valueCodeableConcept
+    * coding = $phy#1002	"-钙化斑块"
+
+* component[+]
+  * code = $sct#386139002	"-斑块"
+  * valueCodeableConcept
+    * coding = $phy#1003	"-混合斑块"
