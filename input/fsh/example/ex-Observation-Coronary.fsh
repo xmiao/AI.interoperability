@@ -12,7 +12,7 @@ Usage: #example
   
 * status = #final
 * code = $sct#251015000 "Coronary artery finding"
-* bodySite = $sct#71341001:272741003=7771000 "body site"
+* bodySite = $sct#68787002	"Proximal Left Anterior Descending Coronary Artery"
 * derivedFrom = Reference(ImageStudy/ex-ImagingStudy-PHY)
 
 * component[0]
