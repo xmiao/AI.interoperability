@@ -39,7 +39,8 @@ Usage: #example
     * coding[+] = $apgarheartrate#0
     * text = "0. No heart rate"
 
-* component[+].code.coding[0] = $loinc#32409-5 "1 minute Apgar Reflex Irritability"
+* component[+]
+  * code.coding[0] = $loinc#32409-5 "1 minute Apgar Reflex Irritability"
   * code.coding[+] = $sct#249226008 "Apgar response to stimulus score"
   * code.text = "Apgar response to stimulus score"
   * valueCodeableConcept.coding[0].extension.url = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
@@ -48,7 +49,8 @@ Usage: #example
   * valueCodeableConcept.coding[+] = $apgarreflexirritability#0
   * valueCodeableConcept.text = "0. No response to airways being suctioned"
 
-* component[+].code.coding[0] = $loinc#32408-7 "1 minute Apgar Muscle Tone"
+* component[+]
+  * code.coding[0] = $loinc#32408-7 "1 minute Apgar Muscle Tone"
   * code.coding[+] = $sct#249225007 "Apgar muscle tone score"
   * code.text = "Apgar muscle tone score"
   * valueCodeableConcept.coding[0].extension.url = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
@@ -57,11 +59,15 @@ Usage: #example
   * valueCodeableConcept.coding[+] = $apgarmuscletone#0
   * valueCodeableConcept.text = "0. Limp; no movement"
 
-* component[+].code.coding[0] = $loinc#32410-3 "1 minute Apgar Respiratory effort"
-  * code.coding[+] = $sct#249224006 "Apgar respiratory effort score"
-  * code.text = "Apgar respiratory effort score"
-  * valueCodeableConcept.coding[0].extension.url = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
-  * valueCodeableConcept.coding[=].extension.valueDecimal = 0
-  * valueCodeableConcept.coding[=] = $loinc#LA6725-1 "Not breathing"
-  * valueCodeableConcept.coding[+] = $apgarrespiratoryeffort#0
-  * valueCodeableConcept.text = "0. Not breathing"
+* component[+]
+  * code
+    * text = "Apgar respiratory effort score"
+    * coding[0] = $loinc#32410-3 "1 minute Apgar Respiratory effort"
+    * coding[+] = $sct#249224006 "Apgar respiratory effort score"
+  * valueCodeableConcept
+    * coding[0] = $loinc#LA6725-1 "Not breathing"
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
+        * valueDecimal = 0
+    * coding[+] = $apgarrespiratoryeffort#0
+    * text = "0. Not breathing"

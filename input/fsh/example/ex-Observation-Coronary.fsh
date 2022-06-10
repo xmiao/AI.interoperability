@@ -15,3 +15,7 @@ Usage: #example
 * bodySite = $sct#71341001:272741003=7771000 "body site"
 * derivedFrom = Reference(ImageStudy/ex-ImagingStudy-PHY)
 
+* component[0]
+  * code = $sct#386139002	"Stenotic"
+  * valueCodeableConcept
+    * coding = $sct#386139002	"Stenotic"
