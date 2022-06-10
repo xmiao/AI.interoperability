@@ -10,7 +10,7 @@ Description: "This Value Set includes codes from CID 3712 Vessel Descriptors"
 * ^experimental = true
 * ^publisher = "National Electrical Manufacturers Association (DICOM)"
 // uid = 1.2.840.10008.6.1.213
-* ^extensible = true
+// * ^extensible = true
 
 * $sct#373138006	"Ulcerated"
 * $sct#371893007	"Restenotic"
