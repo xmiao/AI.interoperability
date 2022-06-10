@@ -1,0 +1,27 @@
+{
+  "vessel": "LAD",
+  "section": "pLAD",
+  "straitness": "轻微狭窄",
+  "stent": false,
+  "plaque": [
+    "钙化斑块",
+    "混合斑块"
+  ],
+  "path": [
+    {
+      "_gtype": "POLYLINE",
+      "_coord2d": [
+        186.4132537841797,
+        274.5900573730469,
+        89.10497283935547,
+        374.7270812988281
+      ],
+      "sourceOfMeasurement": [
+        {
+          "_class": "CTImageStorage",
+          "_instance": "1.3.6.1.4.1.14519.5.2.1. 8421. 4008. 767475413701844560980492237110"
+        }
+      ]
+    }
+  ]
+}
