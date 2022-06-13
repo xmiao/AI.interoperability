@@ -4,8 +4,40 @@
 scale 600 height
 hide @unlinked
 
-
 left to right direction
+
+object Bundle {
+    identifier : Identifier [0..1]
+    type : code [1..1] « BundleType! »
+    timestamp : instant [0..1]
+    total : unsignedInt [0..1]
+    signature : Signature [0..1]
+}
+
+object Entry {
+    fullUrl : uri [0..1]
+    resource : Resource [0..1]
+}
+
+Bundle *--"0..*" Entry : entry
+
+object Patient {
+}
+
+object Composition {
+}
+
+object Organization {
+}
+
+object ImagingStudy {
+}
+
+Entry *--"0..*" Patient : resource
+Entry *--"0..*" Composition : resource
+Entry *--"0..*" Organization : resource
+Entry *--"0..*" ImagingStudy : resource
+Entry *--"0..*" DiagnosticReport : resource
 
 object DiagnosticReport {
     identifier : Identifier
@@ -36,8 +68,8 @@ note bottom
     otherwise, use composition
 end note
 
-DiagnosticReport::basedOn -- Procedure
-DiagnosticReport::result o--- "1..*" Observation
+'DiagnosticReport::basedOn -- Procedure
+DiagnosticReport::result o--- "[1..*]" Observation : result
 
 object ImagingStudy{
 
@@ -76,7 +108,6 @@ object Observation{
     age : Range [0..1]
     text : string [0..1]
 }
-
 
 object BodySite {
 
