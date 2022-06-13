@@ -2,10 +2,13 @@ Profile:        StoreAIResultBundle
 Parent:         Bundle
 Id:             air-store-ai-result-bundle
 Title:          "AIR Store AI Result Bundle"
-Description:    "AIR AI Result profile on Bundle"
+Description:    """
+AIR AI Result profile on Bundle.
+The patient is required to store the AI results.
+"""
 
 * . MS
-* . ^short = "Smart Vaccination Certificate Bundle"
+* . ^short = "The bundle is used to store the AI result from AI algorithm."
 * entry 1.. MS
 * entry ^slicing.discriminator[0].type = #value
 * entry ^slicing.discriminator[0].path = "resource"
@@ -17,10 +20,3 @@ Description:    "AIR AI Result profile on Bundle"
 
 * entry[isaiPatient].resource 1..1 MS
 * entry[isaiPatient].resource only PPatient
-
-//* entry[DiagnosticReport].resource only DiagnosticReport
-//* entry[DiagnosticReport] ^short = "the DiagnosticReport"
-//* entry[DiagnosticReport] ^definition = "The DiagnosticReport defines the overall diagnostic report."
-//* entry[DiagnosticReport].resource 1..1
-//* entry[DiagnosticReport].request 1..1
-//* entry[DiagnosticReport].request.method = #POST

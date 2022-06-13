@@ -1,4 +1,4 @@
-ValueSet: ISAI-levels
+ValueSet: ISAILevels
 Id: isai-levels
 Description: "The levels of the ISAI-scale."
 

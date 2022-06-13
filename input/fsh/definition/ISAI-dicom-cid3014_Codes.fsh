@@ -1,15 +1,6 @@
 ValueSet: CID_3014_Coronary_Artery_Segments
 Id: dicom-cid3014
 Description: "This Value Set includes codes from CID 3014 Coronary Artery Segments"
-* ^name = "CID_3014_Coronary_Artery_Segments"
-* ^meta.profile = "http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"
-* ^extension.url = "http://hl7.org/fhir/StructureDefinition/valueset-oid"
-//* ^extension.valueUri = "urn:oid:2.16.840.1.113883.4.642.2.158"
-* ^version = "20130403"
-* ^status = #active
-* ^experimental = true
-* ^publisher = "National Electrical Manufacturers Association (DICOM)"
-// * ^extensible = true
 
 * $sct#91750005	"1st Diagonal Coronary Artery"
 * $sct#91757008	"1st Left Posterolateral Coronary Artery"

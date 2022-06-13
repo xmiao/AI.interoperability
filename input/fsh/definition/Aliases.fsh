@@ -19,7 +19,6 @@ Alias: DICOMUID = urn:dicom:uid
 
 Alias: MIME = urn:ietf:bcp:13
 
-//second set of aliases
 Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
 Alias: DCMIdType = http://hl7.org/fhir/uv/dicom-sr/CodeSystem/dicom-identifier-type
 Alias: HL7IdType = http://terminology.hl7.org/CodeSystem/v2-0203
