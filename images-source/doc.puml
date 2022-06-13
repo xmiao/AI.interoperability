@@ -69,28 +69,43 @@ object Organization {
 object ImagingStudy {
     identifier : Identifier [0..*]
     status : code [1..1] « ImagingStudyStatus! »
-    modality : CodeableConcept [0..*] « ImagingModality+ »
+'    modality : CodeableConcept [0..*] « ImagingModality+ »
     subject : Reference [1..1] « Patient|Device|Group »
-    encounter : Reference [0..1] « Encounter »
+'    encounter : Reference [0..1] « Encounter »
     started : dateTime [0..1]
-    basedOn : Reference [0..*] « CarePlan|ServiceRequest|Appointment|
-    AppointmentResponse|Task »
-    referrer : Reference [0..1] « Practitioner|PractitionerRole »
-    interpreter : Reference [0..*] « Practitioner|PractitionerRole »
-    endpoint : Reference [0..*] « Endpoint »
+'    basedOn : Reference [0..*] « CarePlan|ServiceRequest|Appointment|
+'    AppointmentResponse|Task »
+'    referrer : Reference [0..1] « Practitioner|PractitionerRole »
+'    interpreter : Reference [0..*] « Practitioner|PractitionerRole »
+'    endpoint : Reference [0..*] « Endpoint »
     numberOfSeries : unsignedInt [0..1]
     numberOfInstances : unsignedInt [0..1]
-    procedure : DataType [0..*] « Procedure; ImagingProcedureCode? »
-    location : Reference [0..1] « Location »
-    reason : DataType [0..*] « Condition|Observation|DiagnosticReport|
-    DocumentReference; ProcedureReasonCodes?? »
-    note : Annotation [0..*]
-    description : string [0..1]
+'    procedure : DataType [0..*] « Procedure; ImagingProcedureCode? »
+'    location : Reference [0..1] « Location »
+'    reason : DataType [0..*] « Condition|Observation|DiagnosticReport|
+'    DocumentReference; ProcedureReasonCodes?? »
+'    note : Annotation [0..*]
+'    description : string [0..1]
+    +series : BackboneElement [0..*]
 }
 
 object Binary{
     contentType
     data
+}
+
+object Series{
+    uid : id [1..1]
+    number : unsignedInt [0..1]
+    modality : CodeableConcept [1..1] « ImagingModality+ »
+    description : string [0..1]
+    numberOfInstances : unsignedInt [0..1]
+'    endpoint : Reference [0..*] « Endpoint »
+    bodySite : DataType [0..1] « BodyStructure; SNOMEDCTBodyStructures?? »
+'    laterality : CodeableConcept [0..1] « Laterality?? »
+'    specimen : Reference [0..*] « Specimen »
+'    started : dateTime [0..1]
+    +instance : BackboneElement [0..*]
 }
 
 Entry *--"0..*" Patient : resource
@@ -100,29 +115,39 @@ Entry *--"0..*" ImagingStudy : resource
 Entry *--"0..*" DiagnosticReport : resource
 Entry *--"0..*" Binary : resource
 
+ImagingStudy *--"0..*" Series : series
+Series *--"0..1" BodySite : bodySite
+
+object Instance {
+    uid : id [1..1]
+    number : unsignedInt [1..1]
+    sopClass : code [1..1] « SOPClass! »
+}
+Series *--"0..*" Instance : instance
+
 object DiagnosticReport {
-    identifier : Identifier
-    basedOn : Reference
-    status : code [1..1]
-    category : CodeableConcept
+'    identifier : Identifier
+'    basedOn : Reference
+'    status : code [1..1]
+'    category : CodeableConcept
   + <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
-    subject : Reference [0..1]
-    encounter : Reference [0..1]
-    effective[x] : DataType [0..1]
-    issued : instant [0..1]
-    performer : Reference
-    resultsInterpreter : Reference
-    specimen : Reference
+'    subject : Reference [0..1]
+'    encounter : Reference [0..1]
+'    effective[x] : DataType [0..1]
+'    issued : instant [0..1]
+'    performer : Reference
+'    resultsInterpreter : Reference
+'    specimen : Reference
   + <b><color brown>result : Reference</color></b>
-    note : Annotation
+'    note : Annotation
     imagingStudy : Reference
-    composition : Reference [0..1]
-    conclusion : string [0..1]
-    conclusionCode : CodeableConcept
-    presentedForm : Attachment
-    Media
-    comment : string [0..1]
-    link : Reference [1..1]
+'    composition : Reference [0..1]
+'    conclusion : string [0..1]
+'    conclusionCode : CodeableConcept
+'    presentedForm : Attachment
+'    Media
+'    comment : string [0..1]
+'    link : Reference [1..1]
 }
 note bottom
   for highly structured report,
