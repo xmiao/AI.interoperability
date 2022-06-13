@@ -22,11 +22,7 @@ Usage: #example
   * text = "... observation with in the dicom sr ..."
 
 * studyUid = "urn:oid:1.2.840.113747.20080222.95946058738699434572916364657859950275"
-* derivedFrom
-  * type = #ImagingStudy
-  * identifier
-    * system = "urn:dicom:uid"
-    * value = "urn:oid:1.2.840.113747.20080222.95946058738699434572916364657859950275.2.1"
+* derivedFrom = Reference(ImagingStudy/ex-ImagingStudy-1)
 
 * seriesUid = "urn:oid:1.2.840.113747.20080222.95946058738699434572916364657859950275.2"
 

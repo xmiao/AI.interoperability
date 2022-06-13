@@ -1,4 +1,4 @@
-Instance: imagingStudy-1
+Instance: ex-imagingStudy-1
 InstanceOf: ImagingStudy
 Usage: #example
 * identifier
