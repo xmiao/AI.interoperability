@@ -13,7 +13,10 @@ Usage: #example
 * status = #final
 * code = $sct#251015000 "Coronary artery finding"
 * bodySite = $sct#68787002	"Proximal Left Anterior Descending Coronary Artery"
-* derivedFrom = Reference(ImageStudy/ex-ImagingStudy-PHY)
+
+//* derivedFrom = Reference(ImageStudy/ex-ImagingStudy-PHY)
+//reference to the image selection
+* derivedFrom = Reference(ImageSelection/ex-ImagingSelection)
 
 * component[0]
   * code = $sct#386139002	"Stenotic"
@@ -21,16 +24,16 @@ Usage: #example
     * coding = $phy#1000	"轻度狭窄"
 
 * component[+]
-  * code = $sct#386139002	"-支架"
+  * code = $sct#386138005	"Stented"
   * valueCodeableConcept
     * coding = $phy#1001	"-无"
 
 * component[+]
-  * code = $sct#386139002	"-斑块"
+  * code = $sct#237897009	"Calcified" //"钙化斑块"
   * valueCodeableConcept
-    * coding = $phy#1002	"-钙化斑块"
+    * coding = $phy#1010	"有"
 
 * component[+]
-  * code = $sct#386139002	"-斑块"
+  * code = $phy#1020	"混合斑块"
   * valueCodeableConcept
-    * coding = $phy#1003	"-混合斑块"
+    * coding = $phy#1010	"有"
