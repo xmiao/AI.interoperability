@@ -16,11 +16,7 @@ Usage: #example
   * system = "urn:dicom:uid"
   * value = "urn:oid:1.2.840.113747.20080222.95946058738699434572916364657859950275.2.1"
 
-* subject
-  * type = #Patient
-  * identifier
-    * system = "http://example.org/patient"
-    * value = "ID_OF_THE_PATIENT_0001"
+* subject = Reference(Patient/ex-Patient)
 
 * code
   * text = "... observation with in the dicom sr ..."

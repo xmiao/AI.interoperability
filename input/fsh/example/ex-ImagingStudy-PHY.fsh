@@ -9,7 +9,7 @@ Usage: #example
   * value = "1105192"
 
 * status = #available
-* subject = Reference(Patient/dicom/PHY-Patient-001)
+* subject = Reference(Patient/ex-Patient)
 
 * series
   * uid = "1.3.12.2.123456"
