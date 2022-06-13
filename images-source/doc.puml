@@ -25,12 +25,72 @@ object Patient {
 }
 
 object Composition {
+    url : uri [0..1]
+    identifier : Identifier [0..1]
+    version : string [0..1]
+    +status : code [1..1] « CompositionStatus! »
+    +type : CodeableConcept [1..1] « FHIRDocumentTypeCodes? »
+    category : CodeableConcept [0..*] « ReferencedItemCategoryValueSet?? »
+    subject : Reference [0..1] « Any »
+    encounter : Reference [0..1] « Encounter »
+    +date : dateTime [1..1]
+    useContext : UsageContext [0..*]
+    author : Reference [1..*] « Practitioner|PractitionerRole|Device|
+    Patient|RelatedPerson|Organization »
+    name : string [0..1]
+    +title : string [1..1]
+    note : Annotation [0..*]
+    confidentiality : code [0..1] « Confidentiality! »
+    custodian : Reference [0..1] « Organization »
+    relatesTo : RelatedArtifact [0..*]
 }
+
+object Section {
+    title : string [0..1]
+    code : CodeableConcept [0..1] « DocumentSectionCodes?? »
+    author : Reference [0..*] « Practitioner|PractitionerRole|Device|
+    Patient|RelatedPerson|Organization »
+    focus : Reference [0..1] « Any »
+    text : Narrative [0..1]
+    mode : code [0..1] « ListMode! »
+    orderedBy : CodeableConcept [0..1] « ListOrderCodes? »
+    entry : Reference [0..*] « Any »
+    emptyReason : CodeableConcept [0..1] « ListEmptyReasons? »
+}
+
+Composition *--"0..*" Section : section
+Section *--"0..*" Section : section
+
+Section *--"0..*" Observation : entry???
 
 object Organization {
 }
 
 object ImagingStudy {
+    identifier : Identifier [0..*]
+    status : code [1..1] « ImagingStudyStatus! »
+    modality : CodeableConcept [0..*] « ImagingModality+ »
+    subject : Reference [1..1] « Patient|Device|Group »
+    encounter : Reference [0..1] « Encounter »
+    started : dateTime [0..1]
+    basedOn : Reference [0..*] « CarePlan|ServiceRequest|Appointment|
+    AppointmentResponse|Task »
+    referrer : Reference [0..1] « Practitioner|PractitionerRole »
+    interpreter : Reference [0..*] « Practitioner|PractitionerRole »
+    endpoint : Reference [0..*] « Endpoint »
+    numberOfSeries : unsignedInt [0..1]
+    numberOfInstances : unsignedInt [0..1]
+    procedure : DataType [0..*] « Procedure; ImagingProcedureCode? »
+    location : Reference [0..1] « Location »
+    reason : DataType [0..*] « Condition|Observation|DiagnosticReport|
+    DocumentReference; ProcedureReasonCodes?? »
+    note : Annotation [0..*]
+    description : string [0..1]
+}
+
+object Binary{
+    contentType
+    data
 }
 
 Entry *--"0..*" Patient : resource
@@ -38,6 +98,7 @@ Entry *--"0..*" Composition : resource
 Entry *--"0..*" Organization : resource
 Entry *--"0..*" ImagingStudy : resource
 Entry *--"0..*" DiagnosticReport : resource
+Entry *--"0..*" Binary : resource
 
 object DiagnosticReport {
     identifier : Identifier
@@ -70,10 +131,6 @@ end note
 
 'DiagnosticReport::basedOn -- Procedure
 DiagnosticReport::result o--- "[1..*]" Observation : result
-
-object ImagingStudy{
-
-}
 
 
 object Observation{
