@@ -25,37 +25,37 @@ object Patient {
 }
 
 object Composition {
-    url : uri [0..1]
-    identifier : Identifier [0..1]
-    version : string [0..1]
+'    url : uri [0..1]
+'    identifier : Identifier [0..1]
+'    version : string [0..1]
     +status : code [1..1] « CompositionStatus! »
     +type : CodeableConcept [1..1] « FHIRDocumentTypeCodes? »
-    category : CodeableConcept [0..*] « ReferencedItemCategoryValueSet?? »
-    subject : Reference [0..1] « Any »
-    encounter : Reference [0..1] « Encounter »
+'    category : CodeableConcept [0..*] « ReferencedItemCategoryValueSet?? »
+'    subject : Reference [0..1] « Any »
+'    encounter : Reference [0..1] « Encounter »
     +date : dateTime [1..1]
-    useContext : UsageContext [0..*]
-    author : Reference [1..*] « Practitioner|PractitionerRole|Device|
-    Patient|RelatedPerson|Organization »
-    name : string [0..1]
+'    useContext : UsageContext [0..*]
+'    author : Reference [1..*] « Practitioner|PractitionerRole|Device|
+'    Patient|RelatedPerson|Organization »
+'    name : string [0..1]
     +title : string [1..1]
-    note : Annotation [0..*]
-    confidentiality : code [0..1] « Confidentiality! »
-    custodian : Reference [0..1] « Organization »
-    relatesTo : RelatedArtifact [0..*]
+'    note : Annotation [0..*]
+'    confidentiality : code [0..1] « Confidentiality! »
+'    custodian : Reference [0..1] « Organization »
+'    relatesTo : RelatedArtifact [0..*]
 }
 
 object Section {
     title : string [0..1]
     code : CodeableConcept [0..1] « DocumentSectionCodes?? »
-    author : Reference [0..*] « Practitioner|PractitionerRole|Device|
-    Patient|RelatedPerson|Organization »
-    focus : Reference [0..1] « Any »
-    text : Narrative [0..1]
-    mode : code [0..1] « ListMode! »
-    orderedBy : CodeableConcept [0..1] « ListOrderCodes? »
+'    author : Reference [0..*] « Practitioner|PractitionerRole|Device|
+'    Patient|RelatedPerson|Organization »
+'    focus : Reference [0..1] « Any »
+'    text : Narrative [0..1]
+'    mode : code [0..1] « ListMode! »
+'    orderedBy : CodeableConcept [0..1] « ListOrderCodes? »
     entry : Reference [0..*] « Any »
-    emptyReason : CodeableConcept [0..1] « ListEmptyReasons? »
+'    emptyReason : CodeableConcept [0..1] « ListEmptyReasons? »
 }
 
 Composition *--"0..*" Section : section
@@ -159,36 +159,36 @@ DiagnosticReport::result o--- "[1..*]" Observation : result
 
 
 object Observation{
-    identifier : Identifier
+'    identifier : Identifier
   +  <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
   +  <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
   +  <b><color brown>value[x] : DataType [0..1]</color></b>
-    instantiates[x] : DataType [0..1]
+'    instantiates[x] : DataType [0..1]
     basedOn : Reference
     partOf : Reference
     status : code [1..1]
-    category : CodeableConcept
-    subject : Reference [0..1]
-    focus : Reference
-    encounter : Reference [0..1]
-    effective[x] : DataType [0..1]
-    issued : instant [0..1]
-    performer : Reference
+'    category : CodeableConcept
+'    subject : Reference [0..1]
+'    focus : Reference
+'    encounter : Reference [0..1]
+'    effective[x] : DataType [0..1]
+'    issued : instant [0..1]
+'    performer : Reference
     dataAbsentReason : CodeableConcept [0..1]
-    interpretation : CodeableConcept
-    note : Annotation
-    method : CodeableConcept [0..1]
-    specimen : Reference [0..1]
+'    interpretation : CodeableConcept
+'    note : Annotation
+'    method : CodeableConcept [0..1]
+'    specimen : Reference [0..1]
     device : Reference [0..1]
     hasMember : Reference
     derivedFrom : Reference
-    ReferenceRange
-    low : Quantity(SimpleQuantity) [0..1]
-    high : Quantity(SimpleQuantity) [0..1]
-    type : CodeableConcept [0..1]
-    appliesTo : CodeableConcept
-    age : Range [0..1]
-    text : string [0..1]
+'    ReferenceRange
+'    low : Quantity(SimpleQuantity) [0..1]
+'    high : Quantity(SimpleQuantity) [0..1]
+'    type : CodeableConcept [0..1]
+'    appliesTo : CodeableConcept
+'    age : Range [0..1]
+'    text : string [0..1]
 }
 
 object BodySite {
