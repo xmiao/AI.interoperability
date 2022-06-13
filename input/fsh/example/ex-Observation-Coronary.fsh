@@ -26,7 +26,7 @@ Usage: #example
 * component[+]
   * code = $sct#386138005	"Stented"
   * valueCodeableConcept
-    * coding = $phy#1001	"-无"
+    * coding = $phy#1001	"无"
 
 * component[+]
   * code = $sct#237897009	"Calcified" //"钙化斑块"

@@ -5,4 +5,4 @@ Description: "Organization example"
 Usage: #example
 
 * id = "PHY-Organization-001"
-* name.value = "Philips ISAI"
+* name.value = "Philips ISAI Organization"
