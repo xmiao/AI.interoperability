@@ -20,7 +20,7 @@ object Entry {
     + resource : Resource [0..1]
 }
 
-Bundle *--"0..*" Entry : entry
+Bundle *-"0..*" Entry : entry
 
 object Patient {
 }
@@ -62,7 +62,7 @@ object Section {
 Composition *--"0..*" Section : section
 Section *--"0..*" Section : section
 
-Section *--"0..*" Observation : entry???
+'Section *--"0..*" Observation : entry???
 
 object Organization {
 }
@@ -112,7 +112,7 @@ object Series{
 Entry *--"0..*" Patient : resource
 Entry *--"0..*" Composition : resource
 Entry *--"0..*" Organization : resource
-Entry *--"0..*" ImagingStudy : resource
+'Entry *--"0..*" ImagingStudy : resource
 Entry *--"0..*" DiagnosticReport : resource
 Entry *--"0..*" Binary : resource
 
@@ -156,7 +156,7 @@ note bottom
 end note
 
 'DiagnosticReport::basedOn -- Procedure
-DiagnosticReport::result o--- "[1..*]" Observation : result
+DiagnosticReport::result o-- "[1..*]" Observation : result
 
 
 object Observation{
@@ -234,8 +234,8 @@ object ValueSet2{
 }
 
 Observation --> ImagingSelection: basedOn
-Observation::X1 "1" ---> "1" ValueSet::code
-'Observation::bodySite ---> ValueSet2
+Observation::X1 "1" --> "1" ValueSet::code
+'Observation::bodySite --> ValueSet2
 Observation::component --> d1 : component
 d1 --> Component1
 d1 --> Component2
