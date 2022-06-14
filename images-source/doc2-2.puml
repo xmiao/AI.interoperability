@@ -20,7 +20,6 @@ class Entry {
     + resource : Resource [0..1]
 }
 
-Bundle *-"0..*" Entry : entry
 
 class Patient {
 }
@@ -59,8 +58,6 @@ class Section {
 '    emptyReason : CodeableConcept [0..1] « ListEmptyReasons? »
 }
 
-Composition *--"0..*" Section : section
-Section *--"0..*" Section : section
 
 'Section *--"0..*" Observation : entry???
 
@@ -113,14 +110,6 @@ class Series{
 '    started : dateTime [0..1]
     +instance : BackboneElement [0..*]
 }
-
-Entry *--"0..*" Composition : resource
-Entry *--"0..1" Patient : resource
-Entry *--"0..1*" Organization : resource
-Entry *--"0..*" ImagingStudy : resource
-Entry *--"0..*" DiagnosticReport : resource
-Entry *--"0..*" Binary : resource
-Entry *-- OtherResources
 
 ImagingStudy *--"0..*" Series : series
 Series *--"0..1" BodySite : bodySite
