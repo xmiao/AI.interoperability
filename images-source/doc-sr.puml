@@ -1,12 +1,12 @@
-@startuml ISAI-Shukun-1
+@startuml PERT
 'https://plantuml.com/object-diagram
 
-'scale 600 height
+scale 600 height
 hide @unlinked
 
 left to right direction
 
-class Bundle {
+object Bundle {
 '    identifier : Identifier [0..1]
 '    type : code [1..1] « BundleType! »
 '    timestamp : instant [0..1]
@@ -15,17 +15,17 @@ class Bundle {
     + entry : BackboneElement [0..*]
 }
 
-class Entry {
+object Entry {
     fullUrl : uri [0..1]
     + resource : Resource [0..1]
 }
 
-Bundle *-"0..*" Entry : entry
+'Bundle *--"0..*" Entry : entry
 
-class Patient {
+object Patient {
 }
 
-class Composition {
+object Composition {
 '    url : uri [0..1]
 '    identifier : Identifier [0..1]
 '    version : string [0..1]
@@ -46,7 +46,7 @@ class Composition {
 '    relatesTo : RelatedArtifact [0..*]
 }
 
-class Section {
+object Section {
     title : string [0..1]
     code : CodeableConcept [0..1] « DocumentSectionCodes?? »
 '    author : Reference [0..*] « Practitioner|PractitionerRole|Device|
@@ -59,13 +59,14 @@ class Section {
 '    emptyReason : CodeableConcept [0..1] « ListEmptyReasons? »
 }
 
-
+'Composition *--"0..*" Section : section
+'Section *--"0..*" Section : section
 'Section *--"0..*" Observation : entry???
 
-class Organization {
+object Organization {
 }
 
-class ImagingStudy {
+object ImagingStudy {
     identifier : Identifier [0..*]
     status : code [1..1] « ImagingStudyStatus! »
 '    modality : CodeableConcept [0..*] « ImagingModality+ »
@@ -88,25 +89,43 @@ class ImagingStudy {
     +series : BackboneElement [0..*]
 }
 
-class Binary{
+object Binary{
     contentType
     data
 }
 
-class OtherResources{
-
+object Series{
+    uid : id [1..1]
+    number : unsignedInt [0..1]
+    modality : CodeableConcept [1..1] « ImagingModality+ »
+    description : string [0..1]
+    numberOfInstances : unsignedInt [0..1]
+'    endpoint : Reference [0..*] « Endpoint »
+    bodySite : DataType [0..1] « BodyStructure; SNOMEDCTBodyStructures?? »
+'    laterality : CodeableConcept [0..1] « Laterality?? »
+'    specimen : Reference [0..*] « Specimen »
+'    started : dateTime [0..1]
+    +instance : BackboneElement [0..*]
 }
 
+'Entry *--"0..*" Patient : resource
+'Entry *--"0..*" Composition : resource
+'Entry *--"0..*" Organization : resource
+'Entry *--"0..*" ImagingStudy : resource
+'Entry *--"0..*" DiagnosticReport : resource
+'Entry *--"0..*" Binary : resource
 
-Entry *--"0..*" Composition : resource
-Entry *--"0..1" Patient : resource
-Entry *--"0..1*" Organization : resource
-Entry *--"0..*" ImagingStudy : resource
-Entry *--"0..*" DiagnosticReport : resource
-Entry *--"0..*" Binary : resource
-Entry *-- OtherResources
+'ImagingStudy *--"0..*" Series : series
+'Series *--"0..1" BodySite : bodySite
 
-class DiagnosticReport {
+object Instance {
+    uid : id [1..1]
+    number : unsignedInt [1..1]
+    sopClass : code [1..1] « SOPClass! »
+}
+'Series *--"0..*" Instance : instance
+
+object DiagnosticReport {
 '    identifier : Identifier
 '    basedOn : Reference
 '    status : code [1..1]
@@ -130,11 +149,58 @@ class DiagnosticReport {
 '    comment : string [0..1]
 '    link : Reference [1..1]
 }
-note bottom
-  for highly structured report,
-    otherwise, use composition
-end note
+'note bottom
+'  for highly structured report,
+'    otherwise, use composition
+'end note
 
+'DiagnosticReport::basedOn -- Procedure
+'DiagnosticReport::result o--- "[1..*]" Observation : result
+
+
+object Observation{
+'    identifier : Identifier
+  +  <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+  +  <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
+  +  <b><color brown>value[x] : DataType [0..1]</color></b>
+'    instantiates[x] : DataType [0..1]
+    basedOn : Reference
+    partOf : Reference
+    status : code [1..1]
+    category : CodeableConcept
+'    subject : Reference [0..1]
+'    focus : Reference
+'    encounter : Reference [0..1]
+'    effective[x] : DataType [0..1]
+'    issued : instant [0..1]
+'    performer : Reference
+    dataAbsentReason : CodeableConcept [0..1]
+'    interpretation : CodeableConcept
+'    note : Annotation
+'    method : CodeableConcept [0..1]
+'    specimen : Reference [0..1]
+    device : Reference [0..1]
+    hasMember : Reference
+    derivedFrom : Reference
+'    ReferenceRange
+'    low : Quantity(SimpleQuantity) [0..1]
+'    high : Quantity(SimpleQuantity) [0..1]
+'    type : CodeableConcept [0..1]
+'    appliesTo : CodeableConcept
+'    age : Range [0..1]
+'    text : string [0..1]
+     +component : BackboneElement [0..*]
+}
+
+object BodySite {
+
+}
+
+'note bottom
+'  The BodyStructure resource is
+'  an immature resource with an
+'  FMM level of 1
+'end note
 
 object Component1 {
     code = $sct#386139002	"Stenotic"
@@ -156,17 +222,26 @@ object Component4 {
   * valueCodeableConcept = $phy#1010	"有"
 }
 
-class ValueSet {
+object ValueSet {
     code : $sct#251015000 "Coronary artery finding"
 }
 
 <> d1
 
-class ValueSet2{
+object ValueSet2{
     bodySite: $sct#67734004 "Upper Trunk Structure"
 }
 
-class ImagingSelection {
+'Observation --> ImagingSelection: basedOn
+'Observation::X1 "1" ---> "1" ValueSet::code
+'Observation::bodySite ---> ValueSet2
+'Observation::component --> d1 : component
+'d1 --> Component1
+'d1 --> Component2
+'d1 --> Component3
+'d1 --> Component4
+
+object ImagingSelection {
     identifier : Identifier [0..*]
     subject : Reference [0..1] « Patient|Group|Device|Location|
 '    Organization|Procedure|Practitioner|Medication|Substance|
@@ -185,10 +260,13 @@ class ImagingSelection {
     imageRegion : BackboneElement [0..1]
 }
 
-class ImageRegion{
+object ImageRegion{
     +regionType : code [1..1] « ImagingSelectionGraphicType! »
     +coordinateType : code [1..1] « ImagingSelectionCoordinateType! »
     +coordinate : decimal [1..*]
 }
+
+'ImagingSelection *--"[0..1]" ImageRegion : imageRegion
+'ImagingSelection *--"[0..*]" ImagingStudy : derivedFrom
 
 @enduml
