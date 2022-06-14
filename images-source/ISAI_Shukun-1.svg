@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1314px" preserveAspectRatio="none" style="width:1525px;height:1314px;background:#FFFFFF;" version="1.1" viewBox="0 0 1525 1314" width="1525px" zoomAndPan="magnify"><defs/><g><!--MD5=[536e464d8b1e54faa737ee1f4ae6355d]
+class Bundle--><g id="elem_Bundle"><rect codeLine="8" fill="#F1F1F1" height="64.4883" id="Bundle" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="232" x="101" y="729"/><ellipse cx="189.25" cy="745" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M192.2231,750.6431 Q191.6421,750.9419 191.0029,751.0913 Q190.3638,751.2407 189.6582,751.2407 Q187.1514,751.2407 185.8315,749.5889 Q184.5117,747.937 184.5117,744.8159 Q184.5117,741.6865 185.8315,740.0347 Q187.1514,738.3828 189.6582,738.3828 Q190.3638,738.3828 191.0112,738.5322 Q191.6587,738.6816 192.2231,738.9805 L192.2231,741.7031 Q191.5923,741.1221 190.9988,740.8523 Q190.4053,740.5825 189.7744,740.5825 Q188.4297,740.5825 187.7449,741.6492 Q187.0601,742.7158 187.0601,744.8159 Q187.0601,746.9077 187.7449,747.9744 Q188.4297,749.041 189.7744,749.041 Q190.4053,749.041 190.9988,748.7712 Q191.5923,748.5015 192.2231,747.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="209.75" y="750.291">Bundle</text><line style="stroke:#181818;stroke-width:0.5;" x1="102" x2="332" y1="761" y2="761"/><ellipse cx="112" cy="772" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="206" x="121" y="778.5352">entry : BackboneElement [0..*]</text><line style="stroke:#181818;stroke-width:0.5;" x1="102" x2="332" y1="785.4883" y2="785.4883"/></g><!--MD5=[96293e8b231702a792e4ba32419ac2da]
+class Entry--><g id="elem_Entry"><rect codeLine="17" fill="#F1F1F1" height="80.9766" id="Entry" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="201" x="116.5" y="844.5"/><ellipse cx="195.25" cy="860.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M198.2231,866.1431 Q197.6421,866.4419 197.0029,866.5913 Q196.3638,866.7407 195.6582,866.7407 Q193.1514,866.7407 191.8315,865.0889 Q190.5117,863.437 190.5117,860.3159 Q190.5117,857.1865 191.8315,855.5347 Q193.1514,853.8828 195.6582,853.8828 Q196.3638,853.8828 197.0112,854.0322 Q197.6587,854.1816 198.2231,854.4805 L198.2231,857.2031 Q197.5923,856.6221 196.9988,856.3523 Q196.4053,856.0825 195.7744,856.0825 Q194.4297,856.0825 193.7449,857.1492 Q193.0601,858.2158 193.0601,860.3159 Q193.0601,862.4077 193.7449,863.4744 Q194.4297,864.541 195.7744,864.541 Q196.4053,864.541 196.9988,864.2712 Q197.5923,864.0015 198.2231,863.4204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="215.75" y="865.791">Entry</text><line style="stroke:#181818;stroke-width:0.5;" x1="117.5" x2="316.5" y1="876.5" y2="876.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="136.5" y="894.0352">fullUrl : uri [0..1]</text><ellipse cx="127.5" cy="903.9883" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="136.5" y="910.5234">resource : Resource [0..1]</text><line style="stroke:#181818;stroke-width:0.5;" x1="117.5" x2="316.5" y1="917.4766" y2="917.4766"/></g><!--MD5=[9dd4eaa2771a2ff8dbee15cc1e732cab]
+class Patient--><g id="elem_Patient"><rect codeLine="24" fill="#F1F1F1" height="48" id="Patient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="79" x="722.5" y="629"/><ellipse cx="737.5" cy="645" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M740.4731,650.6431 Q739.8921,650.9419 739.2529,651.0913 Q738.6138,651.2407 737.9082,651.2407 Q735.4014,651.2407 734.0815,649.5889 Q732.7617,647.937 732.7617,644.8159 Q732.7617,641.6865 734.0815,640.0347 Q735.4014,638.3828 737.9082,638.3828 Q738.6138,638.3828 739.2612,638.5322 Q739.9087,638.6816 740.4731,638.9805 L740.4731,641.7031 Q739.8423,641.1221 739.2488,640.8523 Q738.6553,640.5825 738.0244,640.5825 Q736.6797,640.5825 735.9949,641.6492 Q735.3101,642.7158 735.3101,644.8159 Q735.3101,646.9077 735.9949,647.9744 Q736.6797,649.041 738.0244,649.041 Q738.6553,649.041 739.2488,648.7712 Q739.8423,648.5015 740.4731,647.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="751.5" y="650.291">Patient</text><line style="stroke:#181818;stroke-width:0.5;" x1="723.5" x2="800.5" y1="661" y2="661"/><line style="stroke:#181818;stroke-width:0.5;" x1="723.5" x2="800.5" y1="669" y2="669"/></g><!--MD5=[251454e98c15f29849fb35b1904d0020]
+class Composition--><g id="elem_Composition"><rect codeLine="27" fill="#F1F1F1" height="113.9531" id="Composition" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="438" x="543" y="712"/><ellipse cx="713.75" cy="728" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M716.7231,733.6431 Q716.1421,733.9419 715.5029,734.0913 Q714.8638,734.2407 714.1582,734.2407 Q711.6514,734.2407 710.3315,732.5889 Q709.0117,730.937 709.0117,727.8159 Q709.0117,724.6865 710.3315,723.0347 Q711.6514,721.3828 714.1582,721.3828 Q714.8638,721.3828 715.5112,721.5322 Q716.1587,721.6816 716.7231,721.9805 L716.7231,724.7031 Q716.0923,724.1221 715.4988,723.8523 Q714.9053,723.5825 714.2744,723.5825 Q712.9297,723.5825 712.2449,724.6492 Q711.5601,725.7158 711.5601,727.8159 Q711.5601,729.9077 712.2449,730.9744 Q712.9297,732.041 714.2744,732.041 Q714.9053,732.041 715.4988,731.7712 Q716.0923,731.5015 716.7231,730.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="734.25" y="733.291">Composition</text><line style="stroke:#181818;stroke-width:0.5;" x1="544" x2="980" y1="744" y2="744"/><ellipse cx="554" cy="755" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="286" x="563" y="761.5352">status : code [1..1] « CompositionStatus! »</text><ellipse cx="554" cy="771.4883" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="412" x="563" y="778.0234">type : CodeableConcept [1..1] « FHIRDocumentTypeCodes? »</text><ellipse cx="554" cy="787.9766" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="563" y="794.5117">date : dateTime [1..1]</text><ellipse cx="554" cy="804.4648" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="563" y="811">title : string [1..1]</text><line style="stroke:#181818;stroke-width:0.5;" x1="544" x2="980" y1="817.9531" y2="817.9531"/></g><!--MD5=[09a53695e98d4f26e7a054522080af08]
+class Section--><!--MD5=[86c7c362de55a38b660185a1328fe18d]
+class Organization--><g id="elem_Organization"><rect codeLine="64" fill="#F1F1F1" height="48" id="Organization" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="701" y="861"/><ellipse cx="716" cy="877" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M718.9731,882.6431 Q718.3921,882.9419 717.7529,883.0913 Q717.1138,883.2407 716.4082,883.2407 Q713.9014,883.2407 712.5815,881.5889 Q711.2617,879.937 711.2617,876.8159 Q711.2617,873.6865 712.5815,872.0347 Q713.9014,870.3828 716.4082,870.3828 Q717.1138,870.3828 717.7612,870.5322 Q718.4087,870.6816 718.9731,870.9805 L718.9731,873.7031 Q718.3423,873.1221 717.7488,872.8523 Q717.1553,872.5825 716.5244,872.5825 Q715.1797,872.5825 714.4949,873.6492 Q713.8101,874.7158 713.8101,876.8159 Q713.8101,878.9077 714.4949,879.9744 Q715.1797,881.041 716.5244,881.041 Q717.1553,881.041 717.7488,880.7712 Q718.3423,880.5015 718.9731,879.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="730" y="882.291">Organization</text><line style="stroke:#181818;stroke-width:0.5;" x1="702" x2="822" y1="893" y2="893"/><line style="stroke:#181818;stroke-width:0.5;" x1="702" x2="822" y1="901" y2="901"/></g><!--MD5=[181c2720b9794936658bc7f80f7be5f7]
+class ImagingStudy--><g id="elem_ImagingStudy"><rect codeLine="67" fill="#F1F1F1" height="163.418" id="ImagingStudy" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="365" x="579.5" y="944.5"/><ellipse cx="710.75" cy="960.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M713.7231,966.1431 Q713.1421,966.4419 712.5029,966.5913 Q711.8638,966.7407 711.1582,966.7407 Q708.6514,966.7407 707.3315,965.0889 Q706.0117,963.437 706.0117,960.3159 Q706.0117,957.1865 707.3315,955.5347 Q708.6514,953.8828 711.1582,953.8828 Q711.8638,953.8828 712.5112,954.0322 Q713.1587,954.1816 713.7231,954.4805 L713.7231,957.2031 Q713.0923,956.6221 712.4988,956.3523 Q711.9053,956.0825 711.2744,956.0825 Q709.9297,956.0825 709.2449,957.1492 Q708.5601,958.2158 708.5601,960.3159 Q708.5601,962.4077 709.2449,963.4744 Q709.9297,964.541 711.2744,964.541 Q711.9053,964.541 712.4988,964.2712 Q713.0923,964.0015 713.7231,963.4204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="731.25" y="965.791">ImagingStudy</text><line style="stroke:#181818;stroke-width:0.5;" x1="580.5" x2="943.5" y1="976.5" y2="976.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174" x="599.5" y="994.0352">identifier : Identifier [0..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="292" x="599.5" y="1010.5234">status : code [1..1] « ImagingStudyStatus! »</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="339" x="599.5" y="1027.0117">subject : Reference [1..1] « Patient|Device|Group »</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="599.5" y="1043.5">started : dateTime [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="245" x="599.5" y="1059.9883">numberOfSeries : unsignedInt [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="268" x="599.5" y="1076.4766">numberOfInstances : unsignedInt [0..1]</text><ellipse cx="590.5" cy="1086.4297" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="211" x="599.5" y="1092.9648">series : BackboneElement [0..*]</text><line style="stroke:#181818;stroke-width:0.5;" x1="580.5" x2="943.5" y1="1099.918" y2="1099.918"/></g><!--MD5=[8ec9733ebc222e095410d87e12ef10c0]
+class Binary--><g id="elem_Binary"><rect codeLine="90" fill="#F1F1F1" height="80.9766" id="Binary" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97" x="713.5" y="1142.5"/><ellipse cx="738.85" cy="1158.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M741.8231,1164.1431 Q741.2421,1164.4419 740.6029,1164.5913 Q739.9638,1164.7407 739.2582,1164.7407 Q736.7514,1164.7407 735.4315,1163.0889 Q734.1117,1161.437 734.1117,1158.3159 Q734.1117,1155.1865 735.4315,1153.5347 Q736.7514,1151.8828 739.2582,1151.8828 Q739.9638,1151.8828 740.6112,1152.0322 Q741.2587,1152.1816 741.8231,1152.4805 L741.8231,1155.2031 Q741.1923,1154.6221 740.5988,1154.3523 Q740.0053,1154.0825 739.3744,1154.0825 Q738.0297,1154.0825 737.3449,1155.1492 Q736.6601,1156.2158 736.6601,1158.3159 Q736.6601,1160.4077 737.3449,1161.4744 Q738.0297,1162.541 739.3744,1162.541 Q740.0053,1162.541 740.5988,1162.2712 Q741.1923,1162.0015 741.8231,1161.4204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="755.15" y="1163.791">Binary</text><line style="stroke:#181818;stroke-width:0.5;" x1="714.5" x2="809.5" y1="1174.5" y2="1174.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="719.5" y="1192.0352">contentType</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="719.5" y="1208.5234">data</text><line style="stroke:#181818;stroke-width:0.5;" x1="714.5" x2="809.5" y1="1215.4766" y2="1215.4766"/></g><!--MD5=[ce04509af30838404f6c540402d38d5a]
+class OtherResources--><g id="elem_OtherResources"><rect codeLine="95" fill="#F1F1F1" height="48" id="OtherResources" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="141" x="691.5" y="1259"/><ellipse cx="706.5" cy="1275" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M709.4731,1280.6431 Q708.8921,1280.9419 708.2529,1281.0913 Q707.6138,1281.2407 706.9082,1281.2407 Q704.4014,1281.2407 703.0815,1279.5889 Q701.7617,1277.937 701.7617,1274.8159 Q701.7617,1271.6865 703.0815,1270.0347 Q704.4014,1268.3828 706.9082,1268.3828 Q707.6138,1268.3828 708.2612,1268.5322 Q708.9087,1268.6816 709.4731,1268.9805 L709.4731,1271.7031 Q708.8423,1271.1221 708.2488,1270.8523 Q707.6553,1270.5825 707.0244,1270.5825 Q705.6797,1270.5825 704.9949,1271.6492 Q704.3101,1272.7158 704.3101,1274.8159 Q704.3101,1276.9077 704.9949,1277.9744 Q705.6797,1279.041 707.0244,1279.041 Q707.6553,1279.041 708.2488,1278.7712 Q708.8423,1278.5015 709.4731,1277.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="720.5" y="1280.291">OtherResources</text><line style="stroke:#181818;stroke-width:0.5;" x1="692.5" x2="831.5" y1="1291" y2="1291"/><line style="stroke:#181818;stroke-width:0.5;" x1="692.5" x2="831.5" y1="1299" y2="1299"/></g><!--MD5=[fdd48f53b0114597550154f26cb0bd86]
+class DiagnosticReport--><g id="elem_DiagnosticReport"><rect codeLine="108" fill="#F1F1F1" height="97.4648" id="DiagnosticReport" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="257" x="633.5" y="420.5"/><ellipse cx="698.75" cy="436.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M701.7231,442.1431 Q701.1421,442.4419 700.5029,442.5913 Q699.8638,442.7407 699.1582,442.7407 Q696.6514,442.7407 695.3315,441.0889 Q694.0117,439.437 694.0117,436.3159 Q694.0117,433.1865 695.3315,431.5347 Q696.6514,429.8828 699.1582,429.8828 Q699.8638,429.8828 700.5112,430.0322 Q701.1587,430.1816 701.7231,430.4805 L701.7231,433.2031 Q701.0923,432.6221 700.4988,432.3523 Q699.9053,432.0825 699.2744,432.0825 Q697.9297,432.0825 697.2449,433.1492 Q696.5601,434.2158 696.5601,436.3159 Q696.5601,438.4077 697.2449,439.4744 Q697.9297,440.541 699.2744,440.541 Q699.9053,440.541 700.4988,440.2712 Q701.0923,440.0015 701.7231,439.4204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="719.25" y="441.791">DiagnosticReport</text><line style="stroke:#181818;stroke-width:0.5;" x1="634.5" x2="889.5" y1="452.5" y2="452.5"/><ellipse cx="644.5" cy="463.5" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#A52A2A" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="209" x="653.5" y="470.0352">code : CodeableConcept [1..1]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="862.5" y="470.0352"> </text><text fill="#EEEEEE" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="866.5" y="470.0352">X1</text><ellipse cx="644.5" cy="479.9883" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#A52A2A" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="125" x="653.5" y="486.5234">result : Reference</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174" x="653.5" y="503.0117">imagingStudy : Reference</text><line style="stroke:#181818;stroke-width:0.5;" x1="634.5" x2="889.5" y1="509.9648" y2="509.9648"/></g><g id="elem_GMN59815"><path d="M660.5,552.5 L660.5,593.1211 A0,0 0 0 0 660.5,593.1211 L863.5,593.1211 A0,0 0 0 0 863.5,593.1211 L863.5,562.5 L853.5,552.5 L766,552.5 L762,517.8 L758,552.5 L660.5,552.5 A0,0 0 0 0 660.5,552.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M853.5,552.5 L853.5,562.5 L863.5,562.5 L853.5,552.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="176" x="666.5" y="570.0684">for highly structured report,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="174" x="674.5" y="585.3789">otherwise, use composition</text></g><!--MD5=[17dcf86a2a56d645f020afec5c63e635]
+class ValueSet--><!--MD5=[819ff9f8c9f074638a8f3e39912290fb]
+class ValueSet2--><!--MD5=[bf552869d53a7887ddf5513b39525e88]
+class ImagingSelection--><!--MD5=[cff059d48805f0215a2d144474f0dafe]
+class ImageRegion--><!--MD5=[ab9eb564d52c3963e58639075907b668]
+reverse link Bundle to Entry--><g id="link_Bundle_Entry"><path codeLine="22" d="M217,806.13 C217,818.65 217,832.16 217,844.4 " fill="none" id="Bundle-backto-Entry" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="217,793.04,213,799.04,217,805.04,221,799.04,217,793.04" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="189.5" y="823.8184">entry</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="193.1094" y="833.7299">0..*</text></g><!--MD5=[dcc5418b4a30927764443a26e84448ef]
+reverse link Entry to Composition--><g id="link_Entry_Composition"><path codeLine="100" d="M330.43,860.98 C391.81,847.87 469.94,831.18 542.76,815.62 " fill="none" id="Entry-backto-Composition" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="317.59,863.72,324.2929,866.3792,329.3256,861.2147,322.6227,858.5555,317.59,863.72" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="458" y="820.5684">resource</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="513.2053" y="829.97">0..*</text></g><!--MD5=[d415397169eb7e9463e06615c0a97a52]
+reverse link Entry to Patient--><g id="link_Entry_Patient"><path codeLine="101" d="M329.98,854.97 C362.65,843.58 397.48,828.71 427,810 C488.58,770.96 478.52,728.03 543,694 C600.39,663.71 676.67,655.53 722.12,653.48 " fill="none" id="Entry-backto-Patient" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="317.58,859.17,324.5442,861.0408,328.9496,855.3318,321.9854,853.461,317.58,859.17" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="458" y="712.5684">resource</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="690.5001" y="667.2432">0..1</text></g><!--MD5=[02d283e3e40182f28fbd097bba65a6f6]
+reverse link Entry to Organization--><g id="link_Entry_Organization"><path codeLine="102" d="M330.68,885 C443.12,885 611.61,885 700.73,885 " fill="none" id="Entry-backto-Organization" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="317.59,885,323.59,889,329.59,885,323.59,881,317.59,885" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="458" y="881.5684">resource</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="662.8647" y="898.3578">0..1*</text></g><!--MD5=[f26c1afb8088345171d86f995a186062]
+reverse link Entry to ImagingStudy--><g id="link_Entry_ImagingStudy"><path codeLine="103" d="M330.28,914.16 C402.13,932.81 496.98,957.44 579.38,978.84 " fill="none" id="Entry-backto-ImagingStudy" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="317.59,910.86,322.3893,916.2421,329.2032,913.8821,324.404,908.5,317.59,910.86" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="458" y="947.5684">resource</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="549.2117" y="989.7329">0..*</text></g><!--MD5=[6a03eea54c09ce6fa510863a1a80cc22]
+reverse link Entry to DiagnosticReport--><g id="link_Entry_DiagnosticReport"><path codeLine="104" d="M330.56,866.23 C365.73,855.2 401.86,837.72 427,810 C463.64,769.6 437,741.75 457,691 C486.03,617.34 481.46,584.81 543,535 C568.9,514.04 601.36,499.73 633.26,489.96 " fill="none" id="Entry-backto-DiagnosticReport" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="317.67,870,324.5531,872.15,329.1851,866.6233,322.302,864.4733,317.67,870" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="458" y="562.5684">resource</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="603.618" y="504.0805">0..*</text></g><!--MD5=[53dda1af86c90794c0f81029ac11daf4]
+reverse link Entry to Binary--><g id="link_Entry_Binary"><path codeLine="105" d="M271.34,934.42 C332.55,988.61 438.05,1074.56 543,1125 C598.42,1151.64 667.86,1167.42 713.27,1175.64 " fill="none" id="Entry-backto-Binary" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="261.54,925.68,263.353,932.6595,270.4929,933.6704,268.6799,926.6909,261.54,925.68" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="458" y="1078.5684">resource</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="683.6171" y="1188.2477">0..*</text></g><!--MD5=[83947e9c4d0b3039d47f8d12ef162018]
+reverse link Entry to OtherResources--><g id="link_Entry_OtherResources"><path codeLine="106" d="M249.42,936.77 C300.44,1016.01 409.21,1166.06 543,1241 C588.4,1266.43 646.54,1276.72 691.36,1280.76 " fill="none" id="Entry-backto-OtherResources" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="242.31,925.61,242.1584,932.8195,248.7551,935.7323,248.9066,928.5228,242.31,925.61" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[96d5b6cafa1e3216851bed79d5522476]
+@startuml ISAI-Shukun
+'https://plantuml.com/object-diagram
+
+'scale 600 height
+hide @unlinked
+
+left to right direction
+
+class Bundle {
+'    identifier : Identifier [0..1]
+'    type : code [1..1] « BundleType! »
+'    timestamp : instant [0..1]
+'    total : unsignedInt [0..1]
+'    signature : Signature [0..1]
+    + entry : BackboneElement [0..*]
+}
+
+class Entry {
+    fullUrl : uri [0..1]
+    + resource : Resource [0..1]
+}
+
+Bundle *-"0..*" Entry : entry
+
+class Patient {
+}
+
+class Composition {
+'    url : uri [0..1]
+'    identifier : Identifier [0..1]
+'    version : string [0..1]
+    +status : code [1..1] « CompositionStatus! »
+    +type : CodeableConcept [1..1] « FHIRDocumentTypeCodes? »
+'    category : CodeableConcept [0..*] « ReferencedItemCategoryValueSet?? »
+'    subject : Reference [0..1] « Any »
+'    encounter : Reference [0..1] « Encounter »
+    +date : dateTime [1..1]
+'    useContext : UsageContext [0..*]
+'    author : Reference [1..*] « Practitioner|PractitionerRole|Device|
+'    Patient|RelatedPerson|Organization »
+'    name : string [0..1]
+    +title : string [1..1]
+'    note : Annotation [0..*]
+'    confidentiality : code [0..1] « Confidentiality! »
+'    custodian : Reference [0..1] « Organization »
+'    relatesTo : RelatedArtifact [0..*]
+}
+
+class Section {
+    title : string [0..1]
+    code : CodeableConcept [0..1] « DocumentSectionCodes?? »
+'    author : Reference [0..*] « Practitioner|PractitionerRole|Device|
+'    Patient|RelatedPerson|Organization »
+'    focus : Reference [0..1] « Any »
+'    text : Narrative [0..1]
+'    mode : code [0..1] « ListMode! »
+'    orderedBy : CodeableConcept [0..1] « ListOrderCodes? »
+    entry : Reference [0..*] « Any »
+'    emptyReason : CodeableConcept [0..1] « ListEmptyReasons? »
+}
+
+
+'Section *- -"0..*" Observation : entry???
+
+class Organization {
+}
+
+class ImagingStudy {
+    identifier : Identifier [0..*]
+    status : code [1..1] « ImagingStudyStatus! »
+'    modality : CodeableConcept [0..*] « ImagingModality+ »
+    subject : Reference [1..1] « Patient|Device|Group »
+'    encounter : Reference [0..1] « Encounter »
+    started : dateTime [0..1]
+'    basedOn : Reference [0..*] « CarePlan|ServiceRequest|Appointment|
+'    AppointmentResponse|Task »
+'    referrer : Reference [0..1] « Practitioner|PractitionerRole »
+'    interpreter : Reference [0..*] « Practitioner|PractitionerRole »
+'    endpoint : Reference [0..*] « Endpoint »
+    numberOfSeries : unsignedInt [0..1]
+    numberOfInstances : unsignedInt [0..1]
+'    procedure : DataType [0..*] « Procedure; ImagingProcedureCode? »
+'    location : Reference [0..1] « Location »
+'    reason : DataType [0..*] « Condition|Observation|DiagnosticReport|
+'    DocumentReference; ProcedureReasonCodes?? »
+'    note : Annotation [0..*]
+'    description : string [0..1]
+    +series : BackboneElement [0..*]
+}
+
+class Binary{
+    contentType
+    data
+}
+
+class OtherResources{
+
+}
+
+
+Entry *- -"0..*" Composition : resource
+Entry *- -"0..1" Patient : resource
+Entry *- -"0..1*" Organization : resource
+Entry *- -"0..*" ImagingStudy : resource
+Entry *- -"0..*" DiagnosticReport : resource
+Entry *- -"0..*" Binary : resource
+Entry *- - OtherResources
+
+class DiagnosticReport {
+'    identifier : Identifier
+'    basedOn : Reference
+'    status : code [1..1]
+'    category : CodeableConcept
+  + <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+'    subject : Reference [0..1]
+'    encounter : Reference [0..1]
+'    effective[x] : DataType [0..1]
+'    issued : instant [0..1]
+'    performer : Reference
+'    resultsInterpreter : Reference
+'    specimen : Reference
+  + <b><color brown>result : Reference</color></b>
+'    note : Annotation
+    imagingStudy : Reference
+'    composition : Reference [0..1]
+'    conclusion : string [0..1]
+'    conclusionCode : CodeableConcept
+'    presentedForm : Attachment
+'    Media
+'    comment : string [0..1]
+'    link : Reference [1..1]
+}
+note bottom
+  for highly structured report,
+    otherwise, use composition
+end note
+
+
+object Component1 {
+    code = $sct#386139002	"Stenotic"
+    valueCodeableConcept = $phy#1000	"轻度狭窄"
+}
+
+object Component2 {
+  * code = $sct#386138005	"Stented"
+  * valueCodeableConcept = $phy#1001	"无"
+}
+
+object Component3 {
+  * code = $sct#237897009	"Calcified" //"钙化斑块"
+  * valueCodeableConcept = $phy#1010	"有"
+}
+
+object Component4 {
+  * code = $phy#1020	"混合斑块"
+  * valueCodeableConcept = $phy#1010	"有"
+}
+
+class ValueSet {
+    code : $sct#251015000 "Coronary artery finding"
+}
+
+<> d1
+
+class ValueSet2{
+    bodySite: $sct#67734004 "Upper Trunk Structure"
+}
+
+class ImagingSelection {
+    identifier : Identifier [0..*]
+    subject : Reference [0..1] « Patient|Group|Device|Location|
+'    Organization|Procedure|Practitioner|Medication|Substance|
+'    Specimen »
+'    issued : instant [0..1]
+'    basedOn : Reference [0..*] « CarePlan|ServiceRequest|Appointment|
+'    AppointmentResponse|Task »
+'    category : CodeableConcept [0..*] « ImagingSelectionCode?? »
+    code : CodeableConcept [1..1] « ImagingSelectionCode?? »
+    studyUid : oid [0..1]
+    derivedFrom : Reference [0..*] « ImagingStudy »
+'    endpoint : Reference [0..*] « Endpoint »
+    seriesUid : oid [0..1]
+    frameOfReferenceUid : oid [0..1]
+'    bodySite : DataType [0..1] « BodyStructure; SNOMEDCTBodyStructures?? »
+    imageRegion : BackboneElement [0..1]
+}
+
+class ImageRegion{
+    +regionType : code [1..1] « ImagingSelectionGraphicType! »
+    +coordinateType : code [1..1] « ImagingSelectionCoordinateType! »
+    +coordinate : decimal [1..*]
+}
+
+@enduml
+
+@startuml ISAI-Shukun
+
+hide @unlinked
+
+left to right direction
+
+class Bundle {
+    + entry : BackboneElement [0..*]
+}
+
+class Entry {
+    fullUrl : uri [0..1]
+    + resource : Resource [0..1]
+}
+
+Bundle *-"0..*" Entry : entry
+
+class Patient {
+}
+
+class Composition {
+    +status : code [1..1] « CompositionStatus! »
+    +type : CodeableConcept [1..1] « FHIRDocumentTypeCodes? »
+    +date : dateTime [1..1]
+    +title : string [1..1]
+}
+
+class Section {
+    title : string [0..1]
+    code : CodeableConcept [0..1] « DocumentSectionCodes?? »
+    entry : Reference [0..*] « Any »
+}
+
+
+
+class Organization {
+}
+
+class ImagingStudy {
+    identifier : Identifier [0..*]
+    status : code [1..1] « ImagingStudyStatus! »
+    subject : Reference [1..1] « Patient|Device|Group »
+    started : dateTime [0..1]
+    numberOfSeries : unsignedInt [0..1]
+    numberOfInstances : unsignedInt [0..1]
+    +series : BackboneElement [0..*]
+}
+
+class Binary{
+    contentType
+    data
+}
+
+class OtherResources{
+
+}
+
+
+Entry *- -"0..*" Composition : resource
+Entry *- -"0..1" Patient : resource
+Entry *- -"0..1*" Organization : resource
+Entry *- -"0..*" ImagingStudy : resource
+Entry *- -"0..*" DiagnosticReport : resource
+Entry *- -"0..*" Binary : resource
+Entry *- - OtherResources
+
+class DiagnosticReport {
+  + <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+  + <b><color brown>result : Reference</color></b>
+    imagingStudy : Reference
+}
+note bottom
+  for highly structured report,
+    otherwise, use composition
+end note
+
+
+object Component1 {
+    code = $sct#386139002	"Stenotic"
+    valueCodeableConcept = $phy#1000	"轻度狭窄"
+}
+
+object Component2 {
+  * code = $sct#386138005	"Stented"
+  * valueCodeableConcept = $phy#1001	"无"
+}
+
+object Component3 {
+  * code = $sct#237897009	"Calcified" //"钙化斑块"
+  * valueCodeableConcept = $phy#1010	"有"
+}
+
+object Component4 {
+  * code = $phy#1020	"混合斑块"
+  * valueCodeableConcept = $phy#1010	"有"
+}
+
+class ValueSet {
+    code : $sct#251015000 "Coronary artery finding"
+}
+
+<> d1
+
+class ValueSet2{
+    bodySite: $sct#67734004 "Upper Trunk Structure"
+}
+
+class ImagingSelection {
+    identifier : Identifier [0..*]
+    subject : Reference [0..1] « Patient|Group|Device|Location|
+    code : CodeableConcept [1..1] « ImagingSelectionCode?? »
+    studyUid : oid [0..1]
+    derivedFrom : Reference [0..*] « ImagingStudy »
+    seriesUid : oid [0..1]
+    frameOfReferenceUid : oid [0..1]
+    imageRegion : BackboneElement [0..1]
+}
+
+class ImageRegion{
+    +regionType : code [1..1] « ImagingSelectionGraphicType! »
+    +coordinateType : code [1..1] « ImagingSelectionCoordinateType! »
+    +coordinate : decimal [1..*]
+}
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 18:55:52 CST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

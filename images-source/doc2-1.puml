@@ -1,7 +1,7 @@
 @startuml ISAI-Shukun
 'https://plantuml.com/object-diagram
 
-scale 600 height
+'scale 600 height
 hide @unlinked
 
 left to right direction
@@ -59,8 +59,6 @@ class Section {
 '    emptyReason : CodeableConcept [0..1] « ListEmptyReasons? »
 }
 
-Composition *--"0..*" Section : section
-Section *--"0..*" Section : section
 
 'Section *--"0..*" Observation : entry???
 
@@ -100,20 +98,6 @@ class OtherResources{
 }
 
 
-class Series{
-    uid : id [1..1]
-    number : unsignedInt [0..1]
-    modality : CodeableConcept [1..1] « ImagingModality+ »
-    description : string [0..1]
-    numberOfInstances : unsignedInt [0..1]
-'    endpoint : Reference [0..*] « Endpoint »
-    bodySite : DataType [0..1] « BodyStructure; SNOMEDCTBodyStructures?? »
-'    laterality : CodeableConcept [0..1] « Laterality?? »
-'    specimen : Reference [0..*] « Specimen »
-'    started : dateTime [0..1]
-    +instance : BackboneElement [0..*]
-}
-
 Entry *--"0..*" Composition : resource
 Entry *--"0..1" Patient : resource
 Entry *--"0..1*" Organization : resource
@@ -121,16 +105,6 @@ Entry *--"0..*" ImagingStudy : resource
 Entry *--"0..*" DiagnosticReport : resource
 Entry *--"0..*" Binary : resource
 Entry *-- OtherResources
-
-ImagingStudy *--"0..*" Series : series
-Series *--"0..1" BodySite : bodySite
-
-class Instance {
-    uid : id [1..1]
-    number : unsignedInt [1..1]
-    sopClass : code [1..1] « SOPClass! »
-}
-Series *--"0..*" Instance : instance
 
 class DiagnosticReport {
 '    identifier : Identifier
@@ -161,53 +135,6 @@ note bottom
     otherwise, use composition
 end note
 
-'DiagnosticReport::basedOn -- Procedure
-DiagnosticReport::result o-- "[1..*]" Observation : result
-
-
-class Observation{
-'    identifier : Identifier
-  +  <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
-  +  <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
-  +  <b><color brown>value[x] : DataType [0..1]</color></b>
-'    instantiates[x] : DataType [0..1]
-    basedOn : Reference
-    partOf : Reference
-    status : code [1..1]
-    category : CodeableConcept
-'    subject : Reference [0..1]
-'    focus : Reference
-'    encounter : Reference [0..1]
-'    effective[x] : DataType [0..1]
-'    issued : instant [0..1]
-'    performer : Reference
-    dataAbsentReason : CodeableConcept [0..1]
-'    interpretation : CodeableConcept
-'    note : Annotation
-'    method : CodeableConcept [0..1]
-'    specimen : Reference [0..1]
-    device : Reference [0..1]
-    hasMember : Reference
-    derivedFrom : Reference
-'    ReferenceRange
-'    low : Quantity(SimpleQuantity) [0..1]
-'    high : Quantity(SimpleQuantity) [0..1]
-'    type : CodeableConcept [0..1]
-'    appliesTo : CodeableConcept
-'    age : Range [0..1]
-'    text : string [0..1]
-     +component : BackboneElement [0..*]
-}
-
-class BodySite {
-
-}
-
-note bottom
-  The BodyStructure resource is
-  an immature resource with an
-  FMM level of 1
-end note
 
 object Component1 {
     code = $sct#386139002	"Stenotic"
@@ -239,15 +166,6 @@ class ValueSet2{
     bodySite: $sct#67734004 "Upper Trunk Structure"
 }
 
-Observation --> ImagingSelection: basedOn
-Observation::X1 "1" --> "1" ValueSet::code
-'Observation::bodySite --> ValueSet2
-Observation::component --> d1 : component
-d1 --> Component1
-d1 --> Component2
-d1 --> Component3
-d1 --> Component4
-
 class ImagingSelection {
     identifier : Identifier [0..*]
     subject : Reference [0..1] « Patient|Group|Device|Location|
@@ -272,8 +190,5 @@ class ImageRegion{
     +coordinateType : code [1..1] « ImagingSelectionCoordinateType! »
     +coordinate : decimal [1..*]
 }
-
-ImagingSelection *--"[0..1]" ImageRegion : imageRegion
-ImagingSelection *--"[0..*]" ImagingStudy : derivedFrom
 
 @enduml
