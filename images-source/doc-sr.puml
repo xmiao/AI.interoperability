@@ -1,10 +1,10 @@
-@startuml PERT
+@startuml DICOM-SR
 'https://plantuml.com/object-diagram
 
-scale 600 height
+scale 800 width
 hide @unlinked
 
-left to right direction
+'left to right direction
 
 object Bundle {
 '    identifier : Identifier [0..1]
@@ -268,5 +268,42 @@ object ImageRegion{
 
 'ImagingSelection *--"[0..1]" ImageRegion : imageRegion
 'ImagingSelection *--"[0..*]" ImagingStudy : derivedFrom
+
+class ImagingRegion2d{
+    serviceRequestRef
+    imagingStudyRef
+    frameOfReferenceUid
+    imageRegion
+}
+
+class TID1410Measurement{
+    basedOn[serviceRequestRef]
+    partOf[imagingStudyRef]
+    focus[bodyStructure]
+    focus[imageRegion2d]
+    focus[imageRegion3d]
+    focus[sourceImageForSegmentation]
+    hasMember[roiMeasurement]
+}
+
+ImagingRegion2d --|> ImagingSelection
+ImagingRegion3d --|> ImagingSelection
+
+PlanarROIMeasurement --|> Observation
+ReferencedSegment --|> ImagingSelection
+TID300Measurement --|> Observation
+TID1410MeasurementGroup --|> Observation
+TID1411MeasurementGroup --|> Observation
+TID1419Measurement --|> Observation
+TID1501Measurement --|> Observation
+TID1419RoiMeasurement --|> Observation
+VolumeSurfacve --|> ImagingSelection
+
+TID1410MeasurementGroup *--"[0..*]" TID1419RoiMeasurement : hasMember
+TID1411MeasurementGroup *--"[0..*]" TID1419RoiMeasurement : hasMember
+
+TID1410MeasurementGroup *--"[0..*]" ImagingRegion2d : focus
+TID1411MeasurementGroup *--"[0..*]" ImagingRegion3d : focus
+
 
 @enduml

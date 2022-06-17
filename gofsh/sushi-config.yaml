@@ -1,8 +1,0 @@
-canonical: https://philips.com/RAD/Philips/Philips.AI.Interoperability
-fhirVersion: 5.0.0-snapshot1
-FSHOnly: true
-applyExtensionMetadataToRoot: false
-id: philips.ai.interoperability
-name: PHILIPS_AI_INTEROPERABILITY
-status: draft
-version: 0.1.0

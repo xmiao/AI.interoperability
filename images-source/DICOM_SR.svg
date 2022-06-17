@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="215.2831px" preserveAspectRatio="none" style="width:800px;height:215px;background:#FFFFFF;" version="1.1" viewBox="0 0 800 215" width="800.2199px" zoomAndPan="magnify"><defs/><g><g id="elem_Observation"><rect fill="#F1F1F1" height="49.7741" style="stroke:#181818;stroke-width:0.10995052226498075;" width="72.1275" x="440.9016" y="84.2221"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="18.2518" x="467.8395" y="87.6383">Observation</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="441.1215" x2="512.8092" y1="88.7275" y2="88.7275"/><ellipse cx="443.3205" cy="91.1464" fill="none" rx="0.6597" ry="0.6597" style="stroke:#038048;stroke-width:0.2199010445299615;"/><text fill="#A52A2A" font-family="sans-serif" font-size="3.0786" font-weight="bold" lengthAdjust="spacing" textLength="45.9593" x="445.2996" y="92.5835">code : CodeableConcept [1..1]</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="0.8796" x="491.2589" y="92.5835"> </text><text fill="#EEEEEE" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="3.9582" x="492.1385" y="92.5835">X1</text><ellipse cx="443.3205" cy="94.7722" fill="none" rx="0.6597" ry="0.6597" style="stroke:#038048;stroke-width:0.2199010445299615;"/><text fill="#A52A2A" font-family="sans-serif" font-size="3.0786" font-weight="bold" lengthAdjust="spacing" textLength="52.3364" x="445.2996" y="96.2093">bodySite : CodeableConcept [0..1]</text><ellipse cx="443.3205" cy="98.398" fill="none" rx="0.6597" ry="0.6597" style="stroke:#038048;stroke-width:0.2199010445299615;"/><text fill="#A52A2A" font-family="sans-serif" font-size="3.0786" font-weight="bold" lengthAdjust="spacing" textLength="38.7026" x="445.2996" y="99.8351">value[x] : DataType [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="31.006" x="445.2996" y="103.4609">basedOn : Reference</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="27.2677" x="445.2996" y="107.0867">partOf : Reference</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="27.7075" x="445.2996" y="110.7124">status : code [1..1]</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="42.4409" x="445.2996" y="114.3382">category : CodeableConcept</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="66.4101" x="445.2996" y="117.964">dataAbsentReason : CodeableConcept [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="35.8439" x="445.2996" y="121.5898">device : Reference [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="35.1842" x="445.2996" y="125.2156">hasMember : Reference</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="36.7235" x="445.2996" y="128.8414">derivedFrom : Reference</text><ellipse cx="443.3205" cy="131.0301" fill="none" rx="0.6597" ry="0.6597" style="stroke:#038048;stroke-width:0.2199010445299615;"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="54.7554" x="445.2996" y="132.4672">component : BackboneElement [0..*]</text></g><g id="elem_ImagingSelection"><rect fill="#F1F1F1" height="35.2709" style="stroke:#181818;stroke-width:0.10995052226498075;" width="90.3793" x="682.9027" y="91.4788"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="25.9483" x="715.1182" y="94.895">ImagingSelection</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="683.1226" x2="773.0621" y1="95.9842" y2="95.9842"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="38.2628" x="684.2221" y="99.8402">identifier : Identifier [0..*]</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="87.0808" x="684.2221" y="103.466">subject : Reference [0..1] « Patient|Group|Device|Location|</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="87.7405" x="684.2221" y="107.0918">code : CodeableConcept [1..1] « ImagingSelectionCode?? »</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="29.4667" x="684.2221" y="110.7176">studyUid : oid [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="71.4678" x="684.2221" y="114.3434">derivedFrom : Reference [0..*] « ImagingStudy »</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="30.1264" x="684.2221" y="117.9692">seriesUid : oid [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="48.5981" x="684.2221" y="121.595">frameOfReferenceUid : oid [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="57.834" x="684.2221" y="125.2208">imageRegion : BackboneElement [0..1]</text></g><!--MD5=[3284d2421d8a942a8ab3046c450e754f]
+class ImagingRegion2d--><g id="elem_ImagingRegion2d"><rect codeLine="271" fill="#F1F1F1" height="25.0584" id="ImagingRegion2d" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="34.9643" x="585.0467" y="42.4409"/><ellipse cx="588.84" cy="45.9593" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M589.4938,47.2002 Q589.366,47.2659 589.2255,47.2988 Q589.0849,47.3317 588.9298,47.3317 Q588.3785,47.3317 588.0883,46.9684 Q587.7981,46.6052 587.7981,45.9188 Q587.7981,45.2307 588.0883,44.8674 Q588.3785,44.5042 588.9298,44.5042 Q589.0849,44.5042 589.2273,44.537 Q589.3697,44.5699 589.4938,44.6356 L589.4938,45.2343 Q589.3551,45.1066 589.2246,45.0472 Q589.0941,44.9879 588.9553,44.9879 Q588.6596,44.9879 588.509,45.2225 Q588.3585,45.457 588.3585,45.9188 Q588.3585,46.3788 588.509,46.6134 Q588.6596,46.8479 588.9553,46.8479 Q589.0941,46.8479 589.2246,46.7886 Q589.3551,46.7293 589.4938,46.6015 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="26.8279" x="592.0286" y="47.1228">ImagingRegion2d</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="585.2666" x2="619.7911" y1="49.4777" y2="49.4777"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="27.2677" x="586.3661" y="53.3337">serviceRequestRef</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="25.5085" x="586.3661" y="56.9595">imagingStudyRef</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="32.3255" x="586.3661" y="60.5853">frameOfReferenceUid</text><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="19.7911" x="586.3661" y="64.2111">imageRegion</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="585.2666" x2="619.7911" y1="65.7401" y2="65.7401"/></g><!--MD5=[4152147d383b55a7c3d1a00a7b9cb0f3]
+class TID1410Measurement--><!--MD5=[21e9dbb25bcbb8dbe67c852d06337163]
+class ImagingRegion3d--><g id="elem_ImagingRegion3d"><rect fill="#F1F1F1" height="10.5553" id="ImagingRegion3d" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="33.8648" x="680.8136" y="49.6976"/><ellipse cx="684.1121" cy="53.2161" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M684.7659,54.457 Q684.6382,54.5227 684.4976,54.5555 Q684.3571,54.5884 684.2019,54.5884 Q683.6507,54.5884 683.3604,54.2251 Q683.0702,53.8619 683.0702,53.1756 Q683.0702,52.4874 683.3604,52.1242 Q683.6507,51.7609 684.2019,51.7609 Q684.3571,51.7609 684.4994,51.7938 Q684.6418,51.8266 684.7659,51.8924 L684.7659,52.4911 Q684.6272,52.3633 684.4967,52.304 Q684.3662,52.2446 684.2275,52.2446 Q683.9318,52.2446 683.7812,52.4792 Q683.6306,52.7138 683.6306,53.1756 Q683.6306,53.6356 683.7812,53.8701 Q683.9318,54.1047 684.2275,54.1047 Q684.3662,54.1047 684.4967,54.0454 Q684.6272,53.986 684.7659,53.8583 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="26.8279" x="687.1908" y="54.3796">ImagingRegion3d</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="681.0335" x2="714.4585" y1="56.7345" y2="56.7345"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="681.0335" x2="714.4585" y1="58.4937" y2="58.4937"/></g><!--MD5=[be6d001aad8e93c78b160b39652179ba]
+class PlanarROIMeasurement--><g id="elem_PlanarROIMeasurement"><rect fill="#F1F1F1" height="10.5553" id="PlanarROIMeasurement" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="42.221" x="361.0775" y="49.6976"/><ellipse cx="364.376" cy="53.2161" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M365.0298,54.457 Q364.9021,54.5227 364.7615,54.5555 Q364.6209,54.5884 364.4658,54.5884 Q363.9145,54.5884 363.6243,54.2251 Q363.3341,53.8619 363.3341,53.1756 Q363.3341,52.4874 363.6243,52.1242 Q363.9145,51.7609 364.4658,51.7609 Q364.6209,51.7609 364.7633,51.7938 Q364.9057,51.8266 365.0298,51.8924 L365.0298,52.4911 Q364.8911,52.3633 364.7606,52.304 Q364.6301,52.2446 364.4913,52.2446 Q364.1956,52.2446 364.0451,52.4792 Q363.8945,52.7138 363.8945,53.1756 Q363.8945,53.6356 364.0451,53.8701 Q364.1956,54.1047 364.4913,54.1047 Q364.6301,54.1047 364.7606,54.0454 Q364.8911,53.986 365.0298,53.8583 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="35.1842" x="367.4546" y="54.3796">PlanarROIMeasurement</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="361.2974" x2="403.0786" y1="56.7345" y2="56.7345"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="361.2974" x2="403.0786" y1="58.4937" y2="58.4937"/></g><!--MD5=[2f4d00134b76116e9f35a3c23ffa9c92]
+class ReferencedSegment--><g id="elem_ReferencedSegment"><rect fill="#F1F1F1" height="10.5553" id="ReferencedSegment" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="37.1633" x="722.4849" y="49.6976"/><ellipse cx="725.7834" cy="53.2161" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M726.4372,54.457 Q726.3094,54.5227 726.1689,54.5555 Q726.0283,54.5884 725.8732,54.5884 Q725.3219,54.5884 725.0317,54.2251 Q724.7414,53.8619 724.7414,53.1756 Q724.7414,52.4874 725.0317,52.1242 Q725.3219,51.7609 725.8732,51.7609 Q726.0283,51.7609 726.1707,51.7938 Q726.3131,51.8266 726.4372,51.8924 L726.4372,52.4911 Q726.2985,52.3633 726.168,52.304 Q726.0374,52.2446 725.8987,52.2446 Q725.603,52.2446 725.4524,52.4792 Q725.3018,52.7138 725.3018,53.1756 Q725.3018,53.6356 725.4524,53.8701 Q725.603,54.1047 725.8987,54.1047 Q726.0374,54.1047 726.168,54.0454 Q726.2985,53.986 726.4372,53.8583 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="30.1264" x="728.862" y="54.3796">ReferencedSegment</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="722.7048" x2="759.4283" y1="56.7345" y2="56.7345"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="722.7048" x2="759.4283" y1="58.4937" y2="58.4937"/></g><!--MD5=[93d96b5f94b863372d54a15d918362d2]
+class TID300Measurement--><g id="elem_TID300Measurement"><rect fill="#F1F1F1" height="10.5553" id="TID300Measurement" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="38.4827" x="411.105" y="49.6976"/><ellipse cx="414.4035" cy="53.2161" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M415.0573,54.457 Q414.9295,54.5227 414.789,54.5555 Q414.6484,54.5884 414.4933,54.5884 Q413.942,54.5884 413.6518,54.2251 Q413.3616,53.8619 413.3616,53.1756 Q413.3616,52.4874 413.6518,52.1242 Q413.942,51.7609 414.4933,51.7609 Q414.6484,51.7609 414.7908,51.7938 Q414.9332,51.8266 415.0573,51.8924 L415.0573,52.4911 Q414.9186,52.3633 414.7881,52.304 Q414.6576,52.2446 414.5188,52.2446 Q414.2231,52.2446 414.0725,52.4792 Q413.9219,52.7138 413.9219,53.1756 Q413.9219,53.6356 414.0725,53.8701 Q414.2231,54.1047 414.5188,54.1047 Q414.6576,54.1047 414.7881,54.0454 Q414.9186,53.986 415.0573,53.8583 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="31.4458" x="417.4821" y="54.3796">TID300Measurement</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="411.3249" x2="449.3678" y1="56.7345" y2="56.7345"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="411.3249" x2="449.3678" y1="58.4937" y2="58.4937"/></g><!--MD5=[eae2c1e0d5a1f7b21414c9af0959965e]
+class TID1410MeasurementGroup--><g id="elem_TID1410MeasurementGroup"><rect fill="#F1F1F1" height="10.5553" id="TID1410MeasurementGroup" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="49.9175" x="449.1479" y="6.597"/><ellipse cx="452.4464" cy="10.1154" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M453.1002,11.3564 Q452.9724,11.4221 452.8319,11.4549 Q452.6913,11.4878 452.5362,11.4878 Q451.9849,11.4878 451.6947,11.1245 Q451.4044,10.7613 451.4044,10.075 Q451.4044,9.3868 451.6947,9.0236 Q451.9849,8.6603 452.5362,8.6603 Q452.6913,8.6603 452.8337,8.6932 Q452.9761,8.726 453.1002,8.7917 L453.1002,9.3905 Q452.9615,9.2627 452.831,9.2034 Q452.7004,9.144 452.5617,9.144 Q452.266,9.144 452.1154,9.3786 Q451.9648,9.6132 451.9648,10.075 Q451.9648,10.535 452.1154,10.7695 Q452.266,11.0041 452.5617,11.0041 Q452.7004,11.0041 452.831,10.9447 Q452.9615,10.8854 453.1002,10.7576 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="42.8807" x="455.525" y="11.2789">TID1410MeasurementGroup</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="449.3678" x2="498.8455" y1="13.6339" y2="13.6339"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="449.3678" x2="498.8455" y1="15.3931" y2="15.3931"/></g><!--MD5=[07a6ff976455b06dbc6c327e70292bd6]
+class TID1411MeasurementGroup--><g id="elem_TID1411MeasurementGroup"><rect fill="#F1F1F1" height="10.5553" id="TID1411MeasurementGroup" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="49.9175" x="625.5085" y="6.597"/><ellipse cx="628.807" cy="10.1154" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M629.4608,11.3564 Q629.3331,11.4221 629.1925,11.4549 Q629.052,11.4878 628.8968,11.4878 Q628.3455,11.4878 628.0553,11.1245 Q627.7651,10.7613 627.7651,10.075 Q627.7651,9.3868 628.0553,9.0236 Q628.3455,8.6603 628.8968,8.6603 Q629.052,8.6603 629.1943,8.6932 Q629.3367,8.726 629.4608,8.7917 L629.4608,9.3905 Q629.3221,9.2627 629.1916,9.2034 Q629.0611,9.144 628.9224,9.144 Q628.6266,9.144 628.4761,9.3786 Q628.3255,9.6132 628.3255,10.075 Q628.3255,10.535 628.4761,10.7695 Q628.6266,11.0041 628.9224,11.0041 Q629.0611,11.0041 629.1916,10.9447 Q629.3221,10.8854 629.4608,10.7576 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="42.8807" x="631.8857" y="11.2789">TID1411MeasurementGroup</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="625.7284" x2="675.2062" y1="13.6339" y2="13.6339"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="625.7284" x2="675.2062" y1="15.3931" y2="15.3931"/></g><!--MD5=[bea5dc2696b12a22ae53a392e46bfdda]
+class TID1419Measurement--><g id="elem_TID1419Measurement"><rect fill="#F1F1F1" height="10.5553" id="TID1419Measurement" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="40.4618" x="488.6201" y="49.6976"/><ellipse cx="491.9186" cy="53.2161" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M492.5724,54.457 Q492.4447,54.5227 492.3041,54.5555 Q492.1636,54.5884 492.0084,54.5884 Q491.4571,54.5884 491.1669,54.2251 Q490.8767,53.8619 490.8767,53.1756 Q490.8767,52.4874 491.1669,52.1242 Q491.4571,51.7609 492.0084,51.7609 Q492.1636,51.7609 492.3059,51.7938 Q492.4483,51.8266 492.5724,51.8924 L492.5724,52.4911 Q492.4337,52.3633 492.3032,52.304 Q492.1727,52.2446 492.034,52.2446 Q491.7382,52.2446 491.5877,52.4792 Q491.4371,52.7138 491.4371,53.1756 Q491.4371,53.6356 491.5877,53.8701 Q491.7382,54.1047 492.034,54.1047 Q492.1727,54.1047 492.3032,54.0454 Q492.4337,53.986 492.5724,53.8583 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="33.425" x="494.9973" y="54.3796">TID1419Measurement</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="488.84" x2="528.862" y1="56.7345" y2="56.7345"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="488.84" x2="528.862" y1="58.4937" y2="58.4937"/></g><!--MD5=[1da46ce185429cd25691ea1ce073d375]
+class TID1501Measurement--><g id="elem_TID1501Measurement"><rect fill="#F1F1F1" height="10.5553" id="TID1501Measurement" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="40.4618" x="536.7784" y="49.6976"/><ellipse cx="540.077" cy="53.2161" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M540.7308,54.457 Q540.603,54.5227 540.4624,54.5555 Q540.3219,54.5884 540.1667,54.5884 Q539.6155,54.5884 539.3252,54.2251 Q539.035,53.8619 539.035,53.1756 Q539.035,52.4874 539.3252,52.1242 Q539.6155,51.7609 540.1667,51.7609 Q540.3219,51.7609 540.4643,51.7938 Q540.6066,51.8266 540.7308,51.8924 L540.7308,52.4911 Q540.592,52.3633 540.4615,52.304 Q540.331,52.2446 540.1923,52.2446 Q539.8966,52.2446 539.746,52.4792 Q539.5954,52.7138 539.5954,53.1756 Q539.5954,53.6356 539.746,53.8701 Q539.8966,54.1047 540.1923,54.1047 Q540.331,54.1047 540.4615,54.0454 Q540.592,53.986 540.7308,53.8583 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="33.425" x="543.1556" y="54.3796">TID1501Measurement</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="536.9984" x2="577.0203" y1="56.7345" y2="56.7345"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="536.9984" x2="577.0203" y1="58.4937" y2="58.4937"/></g><!--MD5=[c421862a9469b4c310e233ed07cc6341]
+class TID1419RoiMeasurement--><g id="elem_TID1419RoiMeasurement"><rect fill="#F1F1F1" height="10.5553" id="TID1419RoiMeasurement" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="45.2996" x="627.8175" y="49.6976"/><ellipse cx="631.116" cy="53.2161" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M631.7698,54.457 Q631.642,54.5227 631.5015,54.5555 Q631.3609,54.5884 631.2058,54.5884 Q630.6545,54.5884 630.3643,54.2251 Q630.074,53.8619 630.074,53.1756 Q630.074,52.4874 630.3643,52.1242 Q630.6545,51.7609 631.2058,51.7609 Q631.3609,51.7609 631.5033,51.7938 Q631.6457,51.8266 631.7698,51.8924 L631.7698,52.4911 Q631.6311,52.3633 631.5006,52.304 Q631.37,52.2446 631.2313,52.2446 Q630.9356,52.2446 630.785,52.4792 Q630.6344,52.7138 630.6344,53.1756 Q630.6344,53.6356 630.785,53.8701 Q630.9356,54.1047 631.2313,54.1047 Q631.37,54.1047 631.5006,54.0454 Q631.6311,53.986 631.7698,53.8583 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="38.2628" x="634.1946" y="54.3796">TID1419RoiMeasurement</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="628.0374" x2="672.8972" y1="56.7345" y2="56.7345"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="628.0374" x2="672.8972" y1="58.4937" y2="58.4937"/></g><!--MD5=[4602e95c47892e8d23f11792e1590812]
+class VolumeSurfacve--><g id="elem_VolumeSurfacve"><rect fill="#F1F1F1" height="10.5553" id="VolumeSurfacve" rx="0.5498" ry="0.5498" style="stroke:#181818;stroke-width:0.10995052226498075;" width="31.2259" x="767.4546" y="49.6976"/><ellipse cx="770.7532" cy="53.2161" fill="#ADD1B2" rx="2.4189" ry="2.4189" style="stroke:#181818;stroke-width:0.2199010445299615;"/><path d="M771.407,54.457 Q771.2792,54.5227 771.1386,54.5555 Q770.9981,54.5884 770.8429,54.5884 Q770.2917,54.5884 770.0014,54.2251 Q769.7112,53.8619 769.7112,53.1756 Q769.7112,52.4874 770.0014,52.1242 Q770.2917,51.7609 770.8429,51.7609 Q770.9981,51.7609 771.1405,51.7938 Q771.2828,51.8266 771.407,51.8924 L771.407,52.4911 Q771.2682,52.3633 771.1377,52.304 Q771.0072,52.2446 770.8685,52.2446 Q770.5728,52.2446 770.4222,52.4792 Q770.2716,52.7138 770.2716,53.1756 Q770.2716,53.6356 770.4222,53.8701 Q770.5728,54.1047 770.8685,54.1047 Q771.0072,54.1047 771.1377,54.0454 Q771.2682,53.986 771.407,53.8583 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="3.0786" lengthAdjust="spacing" textLength="24.1891" x="773.8318" y="54.3796">VolumeSurfacve</text><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="767.6745" x2="798.4607" y1="56.7345" y2="56.7345"/><line style="stroke:#181818;stroke-width:0.10995052226498075;" x1="767.6745" x2="798.4607" y1="58.4937" y2="58.4937"/></g><!--MD5=[98dd65446342e0159a9196fe67fc6de4]
+link ImagingRegion2d to ImagingSelection--><g id="link_ImagingRegion2d_ImagingSelection"><path codeLine="288" d="M618.575,67.5404 C620.387,68.7169 622.243,69.8318 624.0792,70.8081 C641.2095,79.9186 660.9962,87.7581 678.685,93.9131 " fill="none" id="ImagingRegion2d-to-ImagingSelection" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="679.2369,92.475,682.8939,95.3601,678.2364,95.3865,679.2369,92.475" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[5cb7a28d460522aae239e61217f51b24]
+link ImagingRegion3d to ImagingSelection--><g id="link_ImagingRegion3d_ImagingSelection"><path codeLine="289" d="M700.6553,60.3408 C704.2045,66.6146 710.4277,77.6185 716.0506,87.5602 " fill="none" id="ImagingRegion3d-to-ImagingSelection" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="717.425,86.8631,718.2496,91.4502,714.7466,88.3782,717.425,86.8631" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[12916efdf28ebe7600386a9ec38617d9]
+link PlanarROIMeasurement to Observation--><g id="link_PlanarROIMeasurement_Observation"><path codeLine="291" d="M390.0759,60.2705 C394.9775,63.3821 401.4338,67.4107 407.2567,70.8081 C416.7763,76.3628 427.1468,82.1594 436.9104,87.503 " fill="none" id="PlanarROIMeasurement-to-Observation" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="437.7108,86.1858,440.8334,89.6449,436.2353,88.8884,437.7108,86.1858" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[23b7938cc96de69146c8f55cc882b70a]
+link ReferencedSegment to ImagingSelection--><g id="link_ReferencedSegment_ImagingSelection"><path codeLine="292" d="M739.8219,60.3408 C738.3244,66.5311 735.7141,77.326 733.337,87.1644 " fill="none" id="ReferencedSegment-to-ImagingSelection" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="734.8301,87.536,732.2991,91.4502,731.8373,86.8125,734.8301,87.536" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[a8611980f322ac5921a3ebd94da40da4]
+link TID300Measurement to Observation--><g id="link_TID300Measurement_Observation"><path codeLine="293" d="M434.8169,60.3408 C439.0544,65.2161 445.7724,72.95 452.6113,80.8202 " fill="none" id="TID300Measurement-to-Observation" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="453.8208,79.8659,455.5426,84.1935,451.4964,81.8846,453.8208,79.8659" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[65460548795af4d0327d84976b98ed87]
+link TID1410MeasurementGroup to Observation--><g id="link_TID1410MeasurementGroup_Observation"><path codeLine="294" d="M472.3914,17.2205 C471.3887,20.4926 470.221,24.8488 469.7086,28.807 C469.4953,30.4541 469.68,30.8851 469.7086,32.5454 C470.0517,52.5893 469.0951,57.6932 471.2479,77.6251 C471.3227,78.3266 471.4063,79.0346 471.4942,79.7493 " fill="none" id="TID1410MeasurementGroup-to-Observation" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="473.0291,79.6174,472.1034,84.1847,469.9791,80.0374,473.0291,79.6174" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[9d421bb95cb2c75308d594d0f558129e]
+link TID1411MeasurementGroup to Observation--><g id="link_TID1411MeasurementGroup_Observation"><path codeLine="295" d="M625.4645,15.3689 C580.3364,21.3898 489.4821,34.0671 484.6619,39.1424 C474.5992,49.7394 472.2815,65.7196 472.6553,79.7075 " fill="none" id="TID1411MeasurementGroup-to-Observation" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="474.1968,79.7053,472.8664,84.1715,471.1204,79.8505,474.1968,79.7053" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[fd7f633bbb4a0e83682c65d5511fd90a]
+link TID1419Measurement to Observation--><g id="link_TID1419Measurement_Observation"><path codeLine="296" d="M505.7944,60.3408 C502.9467,65.1303 498.4629,72.6751 493.8736,80.398 " fill="none" id="TID1419Measurement-to-Observation" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="495.1886,81.2007,491.6174,84.1935,492.541,79.6262,495.1886,81.2007" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[ccf7c18c2d16b2a58912c7485261fddc]
+link TID1501Measurement to Observation--><g id="link_TID1501Measurement_Observation"><path codeLine="297" d="M549.4074,60.2903 C541.7174,65.4469 529.2161,73.8252 516.7477,82.1836 " fill="none" id="TID1501Measurement-to-Observation" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="517.5701,83.4854,513.0599,84.6553,515.8571,80.928,517.5701,83.4854" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[d606382d1223a2758b1602b85cf12cdc]
+link TID1419RoiMeasurement to Observation--><g id="link_TID1419RoiMeasurement_Observation"><path codeLine="298" d="M643.072,60.2881 C637.8889,63.6679 630.6894,67.9846 623.8593,70.8081 C589.1105,85.1743 547.448,95.3469 517.381,101.5349 " fill="none" id="TID1419RoiMeasurement-to-Observation" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="517.6493,103.0522,513.0313,102.4211,517.0357,100.0352,517.6493,103.0522" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[80e360421bf5a63419a718da3ffafd2f]
+link VolumeSurfacve to ImagingSelection--><g id="link_VolumeSurfacve_ImagingSelection"><path codeLine="299" d="M777.7966,60.3408 C771.1952,66.7817 759.492,78.2056 749.0973,88.3496 " fill="none" id="VolumeSurfacve-to-ImagingSelection" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="none" points="750.144,89.4799,745.9219,91.4502,747.9934,87.2765,750.144,89.4799" style="stroke:#181818;stroke-width:0.2199010445299615;"/></g><!--MD5=[2489f0a1deee8c5cc0c7979334854041]
+reverse link TID1410MeasurementGroup to TID1419RoiMeasurement--><g id="link_TID1410MeasurementGroup_TID1419RoiMeasurement"><path codeLine="301" d="M502.0319,14.1902 C532.7037,17.1589 583.028,24.022 623.8593,39.1424 C630.8917,41.746 638.1902,46.1726 643.3601,49.6471 " fill="none" id="TID1410MeasurementGroup-backto-TID1419RoiMeasurement" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="#181818" points="499.127,13.9131,500.3574,14.9135,501.754,14.1625,500.5236,13.1622,499.127,13.9131" style="stroke:#181818;stroke-width:0.2199010445299615;"/><text fill="#000000" font-family="sans-serif" font-size="2.8587" lengthAdjust="spacing" textLength="15.8329" x="600.3299" y="31.7907">hasMember</text><text fill="#000000" font-family="sans-serif" font-size="2.8587" lengthAdjust="spacing" textLength="6.597" x="634.0966" y="47.3331">[0..*]</text></g><!--MD5=[240b438bdba30f67cb9be8abe5d397ed]
+reverse link TID1411MeasurementGroup to TID1419RoiMeasurement--><g id="link_TID1411MeasurementGroup_TID1419RoiMeasurement"><path codeLine="302" d="M650.4673,20.0484 C650.4673,28.7059 650.4673,42.2914 650.4673,49.6339 " fill="none" id="TID1411MeasurementGroup-backto-TID1419RoiMeasurement" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="#181818" points="650.4673,17.1567,649.5877,18.4761,650.4673,19.7955,651.3469,18.4761,650.4673,17.1567" style="stroke:#181818;stroke-width:0.2199010445299615;"/><text fill="#000000" font-family="sans-serif" font-size="2.8587" lengthAdjust="spacing" textLength="15.8329" x="650.6872" y="31.7907">hasMember</text><text fill="#000000" font-family="sans-serif" font-size="2.8587" lengthAdjust="spacing" textLength="6.597" x="643.025" y="47.3165">[0..*]</text></g><!--MD5=[f9729f7875db1bde0a873433e296543e]
+reverse link TID1410MeasurementGroup to ImagingRegion2d--><g id="link_TID1410MeasurementGroup_ImagingRegion2d"><path codeLine="304" d="M471.4129,19.9626 C470.4937,24.2199 470.3617,29.2666 473.4469,32.5454 C481.6647,41.282 569.9175,35.0698 581.1985,39.1424 C583.4854,39.9692 585.7416,41.1215 587.8791,42.4321 " fill="none" id="TID1410MeasurementGroup-backto-ImagingRegion2d" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="#181818" points="472.1451,17.1699,470.9594,18.2227,471.4751,19.7222,472.6609,18.6694,472.1451,17.1699" style="stroke:#181818;stroke-width:0.2199010445299615;"/><text fill="#000000" font-family="sans-serif" font-size="2.8587" lengthAdjust="spacing" textLength="7.6965" x="473.6668" y="31.7907">focus</text><text fill="#000000" font-family="sans-serif" font-size="2.8587" lengthAdjust="spacing" textLength="6.597" x="578.9824" y="40.084">[0..*]</text></g><!--MD5=[f5e3cf3d58a7e268df82b8c70fcbbf7d]
+reverse link TID1411MeasurementGroup to ImagingRegion3d--><g id="link_TID1411MeasurementGroup_ImagingRegion3d"><path codeLine="305" d="M658.2342,19.1028 C667.7449,27.6855 683.6306,42.0187 692.0704,49.6339 " fill="none" id="TID1411MeasurementGroup-backto-ImagingRegion3d" style="stroke:#181818;stroke-width:0.2199010445299615;"/><polygon fill="#181818" points="656.077,17.1567,656.4661,18.6939,658.0348,18.926,657.6456,17.3887,656.077,17.1567" style="stroke:#181818;stroke-width:0.2199010445299615;"/><text fill="#000000" font-family="sans-serif" font-size="2.8587" lengthAdjust="spacing" textLength="7.6965" x="672.8972" y="31.7907">focus</text><text fill="#000000" font-family="sans-serif" font-size="2.8587" lengthAdjust="spacing" textLength="6.597" x="683.1737" y="47.3165">[0..*]</text></g><!--MD5=[256159a1f080121574185b3780da4fc7]
+@startuml DICOM-SR
+'https://plantuml.com/object-diagram
+
+scale 800 width
+hide @unlinked
+
+'left to right direction
+
+object Bundle {
+'    identifier : Identifier [0..1]
+'    type : code [1..1] « BundleType! »
+'    timestamp : instant [0..1]
+'    total : unsignedInt [0..1]
+'    signature : Signature [0..1]
+    + entry : BackboneElement [0..*]
+}
+
+object Entry {
+    fullUrl : uri [0..1]
+    + resource : Resource [0..1]
+}
+
+'Bundle *- -"0..*" Entry : entry
+
+object Patient {
+}
+
+object Composition {
+'    url : uri [0..1]
+'    identifier : Identifier [0..1]
+'    version : string [0..1]
+    +status : code [1..1] « CompositionStatus! »
+    +type : CodeableConcept [1..1] « FHIRDocumentTypeCodes? »
+'    category : CodeableConcept [0..*] « ReferencedItemCategoryValueSet?? »
+'    subject : Reference [0..1] « Any »
+'    encounter : Reference [0..1] « Encounter »
+    +date : dateTime [1..1]
+'    useContext : UsageContext [0..*]
+'    author : Reference [1..*] « Practitioner|PractitionerRole|Device|
+'    Patient|RelatedPerson|Organization »
+'    name : string [0..1]
+    +title : string [1..1]
+'    note : Annotation [0..*]
+'    confidentiality : code [0..1] « Confidentiality! »
+'    custodian : Reference [0..1] « Organization »
+'    relatesTo : RelatedArtifact [0..*]
+}
+
+object Section {
+    title : string [0..1]
+    code : CodeableConcept [0..1] « DocumentSectionCodes?? »
+'    author : Reference [0..*] « Practitioner|PractitionerRole|Device|
+'    Patient|RelatedPerson|Organization »
+'    focus : Reference [0..1] « Any »
+'    text : Narrative [0..1]
+'    mode : code [0..1] « ListMode! »
+'    orderedBy : CodeableConcept [0..1] « ListOrderCodes? »
+    entry : Reference [0..*] « Any »
+'    emptyReason : CodeableConcept [0..1] « ListEmptyReasons? »
+}
+
+'Composition *- -"0..*" Section : section
+'Section *- -"0..*" Section : section
+'Section *- -"0..*" Observation : entry???
+
+object Organization {
+}
+
+object ImagingStudy {
+    identifier : Identifier [0..*]
+    status : code [1..1] « ImagingStudyStatus! »
+'    modality : CodeableConcept [0..*] « ImagingModality+ »
+    subject : Reference [1..1] « Patient|Device|Group »
+'    encounter : Reference [0..1] « Encounter »
+    started : dateTime [0..1]
+'    basedOn : Reference [0..*] « CarePlan|ServiceRequest|Appointment|
+'    AppointmentResponse|Task »
+'    referrer : Reference [0..1] « Practitioner|PractitionerRole »
+'    interpreter : Reference [0..*] « Practitioner|PractitionerRole »
+'    endpoint : Reference [0..*] « Endpoint »
+    numberOfSeries : unsignedInt [0..1]
+    numberOfInstances : unsignedInt [0..1]
+'    procedure : DataType [0..*] « Procedure; ImagingProcedureCode? »
+'    location : Reference [0..1] « Location »
+'    reason : DataType [0..*] « Condition|Observation|DiagnosticReport|
+'    DocumentReference; ProcedureReasonCodes?? »
+'    note : Annotation [0..*]
+'    description : string [0..1]
+    +series : BackboneElement [0..*]
+}
+
+object Binary{
+    contentType
+    data
+}
+
+object Series{
+    uid : id [1..1]
+    number : unsignedInt [0..1]
+    modality : CodeableConcept [1..1] « ImagingModality+ »
+    description : string [0..1]
+    numberOfInstances : unsignedInt [0..1]
+'    endpoint : Reference [0..*] « Endpoint »
+    bodySite : DataType [0..1] « BodyStructure; SNOMEDCTBodyStructures?? »
+'    laterality : CodeableConcept [0..1] « Laterality?? »
+'    specimen : Reference [0..*] « Specimen »
+'    started : dateTime [0..1]
+    +instance : BackboneElement [0..*]
+}
+
+'Entry *- -"0..*" Patient : resource
+'Entry *- -"0..*" Composition : resource
+'Entry *- -"0..*" Organization : resource
+'Entry *- -"0..*" ImagingStudy : resource
+'Entry *- -"0..*" DiagnosticReport : resource
+'Entry *- -"0..*" Binary : resource
+
+'ImagingStudy *- -"0..*" Series : series
+'Series *- -"0..1" BodySite : bodySite
+
+object Instance {
+    uid : id [1..1]
+    number : unsignedInt [1..1]
+    sopClass : code [1..1] « SOPClass! »
+}
+'Series *- -"0..*" Instance : instance
+
+object DiagnosticReport {
+'    identifier : Identifier
+'    basedOn : Reference
+'    status : code [1..1]
+'    category : CodeableConcept
+  + <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+'    subject : Reference [0..1]
+'    encounter : Reference [0..1]
+'    effective[x] : DataType [0..1]
+'    issued : instant [0..1]
+'    performer : Reference
+'    resultsInterpreter : Reference
+'    specimen : Reference
+  + <b><color brown>result : Reference</color></b>
+'    note : Annotation
+    imagingStudy : Reference
+'    composition : Reference [0..1]
+'    conclusion : string [0..1]
+'    conclusionCode : CodeableConcept
+'    presentedForm : Attachment
+'    Media
+'    comment : string [0..1]
+'    link : Reference [1..1]
+}
+'note bottom
+'  for highly structured report,
+'    otherwise, use composition
+'end note
+
+'DiagnosticReport::basedOn - - Procedure
+'DiagnosticReport::result o- - - "[1..*]" Observation : result
+
+
+object Observation{
+'    identifier : Identifier
+  +  <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+  +  <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
+  +  <b><color brown>value[x] : DataType [0..1]</color></b>
+'    instantiates[x] : DataType [0..1]
+    basedOn : Reference
+    partOf : Reference
+    status : code [1..1]
+    category : CodeableConcept
+'    subject : Reference [0..1]
+'    focus : Reference
+'    encounter : Reference [0..1]
+'    effective[x] : DataType [0..1]
+'    issued : instant [0..1]
+'    performer : Reference
+    dataAbsentReason : CodeableConcept [0..1]
+'    interpretation : CodeableConcept
+'    note : Annotation
+'    method : CodeableConcept [0..1]
+'    specimen : Reference [0..1]
+    device : Reference [0..1]
+    hasMember : Reference
+    derivedFrom : Reference
+'    ReferenceRange
+'    low : Quantity(SimpleQuantity) [0..1]
+'    high : Quantity(SimpleQuantity) [0..1]
+'    type : CodeableConcept [0..1]
+'    appliesTo : CodeableConcept
+'    age : Range [0..1]
+'    text : string [0..1]
+     +component : BackboneElement [0..*]
+}
+
+object BodySite {
+
+}
+
+'note bottom
+'  The BodyStructure resource is
+'  an immature resource with an
+'  FMM level of 1
+'end note
+
+object Component1 {
+    code = $sct#386139002	"Stenotic"
+    valueCodeableConcept = $phy#1000	"轻度狭窄"
+}
+
+object Component2 {
+  * code = $sct#386138005	"Stented"
+  * valueCodeableConcept = $phy#1001	"无"
+}
+
+object Component3 {
+  * code = $sct#237897009	"Calcified" //"钙化斑块"
+  * valueCodeableConcept = $phy#1010	"有"
+}
+
+object Component4 {
+  * code = $phy#1020	"混合斑块"
+  * valueCodeableConcept = $phy#1010	"有"
+}
+
+object ValueSet {
+    code : $sct#251015000 "Coronary artery finding"
+}
+
+<> d1
+
+object ValueSet2{
+    bodySite: $sct#67734004 "Upper Trunk Structure"
+}
+
+'Observation - -> ImagingSelection: basedOn
+'Observation::X1 "1" - - -> "1" ValueSet::code
+'Observation::bodySite - - -> ValueSet2
+'Observation::component - -> d1 : component
+'d1 - -> Component1
+'d1 - -> Component2
+'d1 - -> Component3
+'d1 - -> Component4
+
+object ImagingSelection {
+    identifier : Identifier [0..*]
+    subject : Reference [0..1] « Patient|Group|Device|Location|
+'    Organization|Procedure|Practitioner|Medication|Substance|
+'    Specimen »
+'    issued : instant [0..1]
+'    basedOn : Reference [0..*] « CarePlan|ServiceRequest|Appointment|
+'    AppointmentResponse|Task »
+'    category : CodeableConcept [0..*] « ImagingSelectionCode?? »
+    code : CodeableConcept [1..1] « ImagingSelectionCode?? »
+    studyUid : oid [0..1]
+    derivedFrom : Reference [0..*] « ImagingStudy »
+'    endpoint : Reference [0..*] « Endpoint »
+    seriesUid : oid [0..1]
+    frameOfReferenceUid : oid [0..1]
+'    bodySite : DataType [0..1] « BodyStructure; SNOMEDCTBodyStructures?? »
+    imageRegion : BackboneElement [0..1]
+}
+
+object ImageRegion{
+    +regionType : code [1..1] « ImagingSelectionGraphicType! »
+    +coordinateType : code [1..1] « ImagingSelectionCoordinateType! »
+    +coordinate : decimal [1..*]
+}
+
+'ImagingSelection *- -"[0..1]" ImageRegion : imageRegion
+'ImagingSelection *- -"[0..*]" ImagingStudy : derivedFrom
+
+class ImagingRegion2d{
+    serviceRequestRef
+    imagingStudyRef
+    frameOfReferenceUid
+    imageRegion
+}
+
+class TID1410Measurement{
+    basedOn[serviceRequestRef]
+    partOf[imagingStudyRef]
+    focus[bodyStructure]
+    focus[imageRegion2d]
+    focus[imageRegion3d]
+    focus[sourceImageForSegmentation]
+    hasMember[roiMeasurement]
+}
+
+ImagingRegion2d - -|> ImagingSelection
+ImagingRegion3d - -|> ImagingSelection
+
+PlanarROIMeasurement - -|> Observation
+ReferencedSegment - -|> ImagingSelection
+TID300Measurement - -|> Observation
+TID1410MeasurementGroup - -|> Observation
+TID1411MeasurementGroup - -|> Observation
+TID1419Measurement - -|> Observation
+TID1501Measurement - -|> Observation
+TID1419RoiMeasurement - -|> Observation
+VolumeSurfacve - -|> ImagingSelection
+
+TID1410MeasurementGroup *- -"[0..*]" TID1419RoiMeasurement : hasMember
+TID1411MeasurementGroup *- -"[0..*]" TID1419RoiMeasurement : hasMember
+
+TID1410MeasurementGroup *- -"[0..*]" ImagingRegion2d : focus
+TID1411MeasurementGroup *- -"[0..*]" ImagingRegion3d : focus
+
+
+@enduml
+
+@startuml DICOM-SR
+
+scale 800 width
+hide @unlinked
+
+
+object Bundle {
+    + entry : BackboneElement [0..*]
+}
+
+object Entry {
+    fullUrl : uri [0..1]
+    + resource : Resource [0..1]
+}
+
+
+object Patient {
+}
+
+object Composition {
+    +status : code [1..1] « CompositionStatus! »
+    +type : CodeableConcept [1..1] « FHIRDocumentTypeCodes? »
+    +date : dateTime [1..1]
+    +title : string [1..1]
+}
+
+object Section {
+    title : string [0..1]
+    code : CodeableConcept [0..1] « DocumentSectionCodes?? »
+    entry : Reference [0..*] « Any »
+}
+
+
+object Organization {
+}
+
+object ImagingStudy {
+    identifier : Identifier [0..*]
+    status : code [1..1] « ImagingStudyStatus! »
+    subject : Reference [1..1] « Patient|Device|Group »
+    started : dateTime [0..1]
+    numberOfSeries : unsignedInt [0..1]
+    numberOfInstances : unsignedInt [0..1]
+    +series : BackboneElement [0..*]
+}
+
+object Binary{
+    contentType
+    data
+}
+
+object Series{
+    uid : id [1..1]
+    number : unsignedInt [0..1]
+    modality : CodeableConcept [1..1] « ImagingModality+ »
+    description : string [0..1]
+    numberOfInstances : unsignedInt [0..1]
+    bodySite : DataType [0..1] « BodyStructure; SNOMEDCTBodyStructures?? »
+    +instance : BackboneElement [0..*]
+}
+
+
+
+object Instance {
+    uid : id [1..1]
+    number : unsignedInt [1..1]
+    sopClass : code [1..1] « SOPClass! »
+}
+
+object DiagnosticReport {
+  + <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+  + <b><color brown>result : Reference</color></b>
+    imagingStudy : Reference
+}
+
+
+
+object Observation{
+  +  <b><color brown>code : CodeableConcept [1..1]</color></b> <color #eee>X1</color>
+  +  <b><color brown>bodySite : CodeableConcept [0..1]</color></b>
+  +  <b><color brown>value[x] : DataType [0..1]</color></b>
+    basedOn : Reference
+    partOf : Reference
+    status : code [1..1]
+    category : CodeableConcept
+    dataAbsentReason : CodeableConcept [0..1]
+    device : Reference [0..1]
+    hasMember : Reference
+    derivedFrom : Reference
+     +component : BackboneElement [0..*]
+}
+
+object BodySite {
+
+}
+
+
+object Component1 {
+    code = $sct#386139002	"Stenotic"
+    valueCodeableConcept = $phy#1000	"轻度狭窄"
+}
+
+object Component2 {
+  * code = $sct#386138005	"Stented"
+  * valueCodeableConcept = $phy#1001	"无"
+}
+
+object Component3 {
+  * code = $sct#237897009	"Calcified" //"钙化斑块"
+  * valueCodeableConcept = $phy#1010	"有"
+}
+
+object Component4 {
+  * code = $phy#1020	"混合斑块"
+  * valueCodeableConcept = $phy#1010	"有"
+}
+
+object ValueSet {
+    code : $sct#251015000 "Coronary artery finding"
+}
+
+<> d1
+
+object ValueSet2{
+    bodySite: $sct#67734004 "Upper Trunk Structure"
+}
+
+
+object ImagingSelection {
+    identifier : Identifier [0..*]
+    subject : Reference [0..1] « Patient|Group|Device|Location|
+    code : CodeableConcept [1..1] « ImagingSelectionCode?? »
+    studyUid : oid [0..1]
+    derivedFrom : Reference [0..*] « ImagingStudy »
+    seriesUid : oid [0..1]
+    frameOfReferenceUid : oid [0..1]
+    imageRegion : BackboneElement [0..1]
+}
+
+object ImageRegion{
+    +regionType : code [1..1] « ImagingSelectionGraphicType! »
+    +coordinateType : code [1..1] « ImagingSelectionCoordinateType! »
+    +coordinate : decimal [1..*]
+}
+
+
+class ImagingRegion2d{
+    serviceRequestRef
+    imagingStudyRef
+    frameOfReferenceUid
+    imageRegion
+}
+
+class TID1410Measurement{
+    basedOn[serviceRequestRef]
+    partOf[imagingStudyRef]
+    focus[bodyStructure]
+    focus[imageRegion2d]
+    focus[imageRegion3d]
+    focus[sourceImageForSegmentation]
+    hasMember[roiMeasurement]
+}
+
+ImagingRegion2d - -|> ImagingSelection
+ImagingRegion3d - -|> ImagingSelection
+
+PlanarROIMeasurement - -|> Observation
+ReferencedSegment - -|> ImagingSelection
+TID300Measurement - -|> Observation
+TID1410MeasurementGroup - -|> Observation
+TID1411MeasurementGroup - -|> Observation
+TID1419Measurement - -|> Observation
+TID1501Measurement - -|> Observation
+TID1419RoiMeasurement - -|> Observation
+VolumeSurfacve - -|> ImagingSelection
+
+TID1410MeasurementGroup *- -"[0..*]" TID1419RoiMeasurement : hasMember
+TID1411MeasurementGroup *- -"[0..*]" TID1419RoiMeasurement : hasMember
+
+TID1410MeasurementGroup *- -"[0..*]" ImagingRegion2d : focus
+TID1411MeasurementGroup *- -"[0..*]" ImagingRegion3d : focus
+
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 18:55:52 CST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
