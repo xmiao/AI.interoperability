@@ -1,18 +1,16 @@
-Instance: ex-Observation-Coronary-001
+Instance: ex-Observation-Lung-001
 InstanceOf: Observation
-Title: "Observation Coronary"
-Description: "ISAI coronary AI result"
+Title: "Observation Lung"
+Description: "ISAI lung AI result"
 Usage: #example
-
-// https://hl7.org/fhir/5.0.0-snapshot1/observation-example-bmd.json.html
 
 * text
   * status = #generated
   * div = "<div>...narrative text for the finding...</div>"
   
 * status = #final
-* code = $sct#251015000 "Coronary artery finding"
-* bodySite = $sct#68787002	"Proximal Left Anterior Descending Coronary Artery"
+* code = $sct#251015000 "Lung finding"
+* bodySite = $sct#68787002	"Proximal Left Anterior Descending Lung Artery"
 
 //* derivedFrom = Reference(ImageStudy/ex-ImagingStudy-PHY)
 //reference to the image selection
