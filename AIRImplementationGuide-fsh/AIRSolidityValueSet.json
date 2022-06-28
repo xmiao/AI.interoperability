@@ -1,0 +1,78 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRSolidityValueSet",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRSolidityValueSet",
+  "title": "AIRSolidityValueSet",
+  "status": "draft",
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "description": "This value se includes an extended set of lesion margin codes",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "task",
+        "display": "Workflow Task"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "code": "RADREPE",
+            "display": "radiology report entry task"
+          }
+        ],
+        "text": "A person reviews a radiology report of a given patient."
+      }
+    },
+    {
+      "code": {
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+        "code": "focus",
+        "display": "Clinical Focus"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "39607008",
+            "display": "Lung structure (body structure)"
+          }
+        ],
+        "text": "Lung"
+      }
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://radlex.org",
+        "version": "4.1",
+        "concept": [
+          {
+            "code": "RID5741",
+            "display": "solid"
+          },
+          {
+            "code": "RID46011",
+            "display": "partially solid"
+          },
+          {
+            "code": "RID46016",
+            "display": "non-solid"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "versionId": "6",
+    "lastUpdated": "2022-05-31T11:17:19.8001607+00:00"
+  },
+  "url": "https://www.fhir.philips.com/solution/4.0/StructureDefinition/airboard/observation-v1/AIRObservationQuantitativeChild",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRObservationQuantitativeChild",
+  "status": "draft",
+  "date": "2022-01-31T13:00:21.5228061Z",
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "ignacio.jauregui@philips.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "This profile captures quantitative measurements of an imaging finding.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://www.fhir.philips.com/4.0/StructureDefinition/common/resource/general/observation-v1/ILSObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "Quantitative measurments of the finding",
+          "valueSet": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRQuantitativeObservationValueSet"
+        }
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "Ratio"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "description": "Spacial unit of measures",
+          "valueSet": "http://hl7.org/fhir/ValueSet/ucum-common"
+        }
+      }
+    ]
+  }
+}

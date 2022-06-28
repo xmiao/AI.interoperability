@@ -1,0 +1,92 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRLocationQualifierValueSet",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRLocationQualifierValueSet",
+  "title": "AIR Location Qualifier",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "ignacio.jauregui@philips.com"
+        }
+      ]
+    }
+  ],
+  "description": "Anatomical location qualifiers elements that allow to represent the particular anatomy structure beign assessed.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "40415009",
+            "display": "Proximal (qualifier value)"
+          },
+          {
+            "code": "46053002",
+            "display": "Distal (qualifier value)"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "419161000",
+            "display": "Unilateral left"
+          },
+          {
+            "code": "419465000",
+            "display": "Unilateral right"
+          },
+          {
+            "code": "51440002",
+            "display": "Bilateral"
+          },
+          {
+            "code": "261183002",
+            "display": "Upper"
+          },
+          {
+            "code": "261122009",
+            "display": "Lower"
+          },
+          {
+            "code": "255561001",
+            "display": "Medial"
+          },
+          {
+            "code": "49370004",
+            "display": "Lateral"
+          },
+          {
+            "code": "264217000",
+            "display": "Superior"
+          },
+          {
+            "code": "261089000",
+            "display": "Inferior"
+          },
+          {
+            "code": "255551008",
+            "display": "Posterior"
+          },
+          {
+            "code": "351726001",
+            "display": "Below"
+          },
+          {
+            "code": "352730000",
+            "display": "Above"
+          }
+        ]
+      }
+    ]
+  }
+}

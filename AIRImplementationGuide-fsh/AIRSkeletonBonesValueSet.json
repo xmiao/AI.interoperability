@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRSkeletonBonesValueSet",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRSkeletonBonesValueSet",
+  "title": "AIR Anatomy Bone View Valueset",
+  "status": "draft",
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio jauregui",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "ignacio.jauregui@philips.com"
+        }
+      ]
+    }
+  ],
+  "description": "An implicit value set containing all the bone structures of the human skeleton",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "113192009"
+          }
+        ]
+      }
+    ]
+  }
+}

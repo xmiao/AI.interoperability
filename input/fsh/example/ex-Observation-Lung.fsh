@@ -21,17 +21,63 @@ Usage: #example
   * valueCodeableConcept
     * coding = $phy#1000	"轻度狭窄"
 
-* component[+]
-  * code = $sct#386138005	"Stented"
-  * valueCodeableConcept
-    * coding = $phy#1001	"无"
-
-* component[+]
-  * code = $sct#237897009	"Calcified" //"钙化斑块"
-  * valueCodeableConcept
-    * coding = $phy#1010	"有"
-
-* component[+]
-  * code = $phy#1020	"混合斑块"
-  * valueCodeableConcept
-    * coding = $phy#1010	"有"
+/*
+[
+  {
+    "Type": "total_lung",
+    "Volume(cm3)": 5.09,
+    "AverageCT(Hu)": "-318.0",
+    "Lesion/Lobe (%)": 1.54,
+    "Lesion/TotalLung(%)": 1.54
+  },
+  {
+    "Type": "left_lung",
+    "Volume(cm3)": 2.79,
+    "AverageCT(Hu)": "-288.0",
+    "Lesion/Lobe (%)": 1.55,
+    "Lesion/TotalLung(%)": 0.84
+  },
+  {
+    "Type": "lul",
+    "Volume(cm3)": 0.0,
+    "AverageCT(Hu)": "-462.0",
+    "Lesion/Lobe (%)": 0.0,
+    "Lesion/TotalLung(%)": 0.0
+  },
+  {
+    "Type": "lll",
+    "Volume(cm3)": 2.78,
+    "AverageCT(Hu)": "-288.0",
+    "Lesion/Lobe (%)": 1.54,
+    "Lesion/TotalLung(%)": 0.84
+  },
+  {
+    "Type": "right_lung",
+    "Volume(cm3)": 2.3,
+    "AverageCT(Hu)": "-355.0",
+    "Lesion/Lobe (%)": 1.52,
+    "Lesion/TotalLung(%)": 0.69
+  },
+  {
+    "Type": "rul",
+    "Volume(cm3)": 0.0,
+    "AverageCT(Hu)": "-",
+    "Lesion/Lobe (%)": 0.0,
+    "Lesion/TotalLung(%)": 0.0
+  },
+  {
+    "Type": "rml",
+    "Volume(cm3)": 0.0,
+    "AverageCT(Hu)": "-",
+    "Lesion/Lobe (%)": 0.0,
+    "Lesion/TotalLung(%)": 0.0
+  },
+  {
+    "Type": "rll",
+    "Volume(cm3)": 2.3,
+    "AverageCT(Hu)": "-355.0",
+    "Lesion/Lobe (%)": 1.52,
+    "Lesion/TotalLung(%)": 0.69
+  }
+]
+*/

@@ -1,0 +1,65 @@
+{
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "versionId": "8",
+    "lastUpdated": "2022-01-31T16:41:26.874+00:00"
+  },
+  "url": "https://www.fhir.philips.com/solution/4.0/StructureDefinition/airboard/observation-v1/AIRObservationMargins",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRObservationMargins",
+  "status": "draft",
+  "date": "2022-01-31T13:11:08.2583882Z",
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "ignacio.jauregui@philips.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A derived profile from ILS Observation that captures the involvement of the margins of a tumor in an image.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://www.fhir.philips.com/4.0/StructureDefinition/common/resource/general/observation-v1/ILSObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371488000",
+              "display": "Tumor margin involvement"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "Lesion margins descriptors",
+          "valueSet": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRMarginValueSet"
+        }
+      }
+    ]
+  }
+}

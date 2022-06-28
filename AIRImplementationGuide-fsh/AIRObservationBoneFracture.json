@@ -1,0 +1,147 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://www.fhir.philips.com/solution/4.0/StructureDefinition/airboard/observation-v1/AIRObservationBoneFracture",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRObservationBoneFracture",
+  "status": "draft",
+  "date": "2022-05-20T14:17:46.5494952Z",
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "ignacio.jauregui@philips.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "This profile captures the structure of the findings made by Gleamer BoneView algorithm.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://www.fhir.philips.com/4.0/StructureDefinition/common/resource/general/observation-v1/ILSObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.basedOn",
+        "path": "Observation.basedOn",
+        "definition": "Reference to the imaging service request resource",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+            ]
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Observation.partOf",
+        "path": "Observation.partOf",
+        "definition": "References the Imaging study in which this observation occured.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.fhir.philips.com/4.0/StructureDefinition/common/resource/image/imagingStudy-v1/ILSImagingStudy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "version": "4.0.1",
+              "code": "imaging",
+              "display": "imaging"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "description": "Type of lesion",
+          "valueSet": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRBoneviewLesionTypesValueSet"
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "comment": "References the patient to whom this observation belongs to",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "comment": "This element references the lesion, either or both in the real world patient anatomy (BodyStructure) and/or in the current image data (ImagingSelection).",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/BodyStructure"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRSkeletonBonesValueSet"
+        }
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "comment": "References the software that generated the observation .",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "resourceType": "Observation",
+  "id": "AIRObservationBoneFracture.example",
+  "meta": {
+    "profile": [
+      "https://www.fhir.philips.com/solution/4.0/StructureDefinition/airboard/observation-v1/AIRObservationBoneFracture"
+    ]
+  },
+  "contained": [
+    {
+      "resourceType": "Device",
+      "id": "GleamerBoneview",
+      "manufacturer": "Gleamer",
+      "deviceName": [
+        {
+          "name": "Boneview",
+          "type": "user-friendly-name"
+        }
+      ],
+      "url": "http://https://www.gleamer.ai/"
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://www.fhir.philips.com/solution/4.0/StructureDefinition/airboard/observation-v1/ObservationCertaintyExtension",
+      "extension": [
+        {
+          "url": "textual",
+          "valueString": "DOUBT"
+        },
+        {
+          "url": "rating",
+          "valueQuantity": {
+            "value": 85,
+            "unit": "%"
+          }
+        }
+      ]
+    }
+  ],
+  "status": "preliminary",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "404684003",
+        "display": "Clinical finding"
+      }
+    ],
+    "text": "Clinical finding"
+  },
+  "subject": {
+    "reference": "Patient/ils-test-ilspatient"
+  },
+  "focus": [
+    {
+      "reference": "AIRBodyStructureBoneFracture.example"
+    }
+  ],
+  "effectiveDateTime": "2022-01-30T10:05:00.000Z",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "72704001",
+        "display": "Fracture (morphologic abnormality)"
+      }
+    ],
+    "text": "Fracture"
+  },
+  "bodySite": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "62413002",
+        "display": "Bone structure of radius (body structure)"
+      }
+    ],
+    "text": "Radius"
+  },
+  "device": {
+    "reference": "#GleamerBoneview",
+    "display": "Gleamer Boneview"
+  }
+}

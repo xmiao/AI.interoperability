@@ -1,0 +1,88 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRQuantitativeObservationValueSet",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRQuantitativeObservationValueSet",
+  "title": "AIR quantitative observation value set",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "description": "This value set includes an example set of quantitative measurement codes for the AIR application.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://radlex.org",
+        "version": "4.1",
+        "concept": [
+          {
+            "code": "RID35968",
+            "display": "Volume"
+          },
+          {
+            "code": "RID29048",
+            "display": "Horizontal long axis"
+          },
+          {
+            "code": "RID29049",
+            "display": "Vertical long axis"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "118565006",
+            "display": "Volume (property) (qualifier value)"
+          },
+          {
+            "code": "22201000087104",
+            "display": "Affected area of body (body structure)"
+          },
+          {
+            "code": "278305009",
+            "display": "Severity score (qualifier value)"
+          },
+          {
+            "code": "410668003",
+            "display": "Length property (qualifier value)"
+          },
+          {
+            "code": "203601000",
+            "display": "Acquired unequal leg length (disorder)"
+          },
+          {
+            "code": "261018001",
+            "display": "Mechanical (qualifier value)"
+          },
+          {
+            "code": "1483009",
+            "display": "Angular (qualifier value)"
+          },
+          {
+            "code": "263727000",
+            "display": "Convergence (qualifier value)"
+          },
+          {
+            "code": "50009006",
+            "display": "Linear (qualifier value)"
+          },
+          {
+            "code": "261040005",
+            "display": "Varus (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+canonical: https://www.fhir.philips.com/solution/4.0/StructureDefinition/airboard/observation-v1/AIRObservationBoneFracture
+fhirVersion: 4.0.1
+FSHOnly: true
+applyExtensionMetadataToRoot: false
+id: fhir.philips.solution.4.0.StructureDefinition.airboard.observation-v1.AIRObservationBoneFracture
+name: FhirPhilipsSolution4.0StructuredefinitionAirboardObservation-v1Airobservationbonefracture
+status: draft
+version: PACKAGE_VERSION

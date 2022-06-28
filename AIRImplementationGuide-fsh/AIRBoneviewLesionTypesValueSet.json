@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRBoneviewLesionTypesValueSet",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRBoneviewLesionTypesValueSet",
+  "title": "AIR Lesion Type",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "ignacio.jauregui@philips.com"
+        }
+      ]
+    }
+  ],
+  "description": "Examples of types of lesions that can be detected by the Gleamer Boneview algorithm.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "72704001",
+            "display": "Fracture (morphologic abnormality)"
+          },
+          {
+            "code": "387637008",
+            "display": "Effusion of joint (disorder)"
+          },
+          {
+            "code": "87642003",
+            "display": "Dislocation (morphologic abnormality)"
+          }
+        ]
+      }
+    ]
+  }
+}

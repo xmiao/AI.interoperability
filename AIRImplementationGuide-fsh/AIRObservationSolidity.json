@@ -1,0 +1,66 @@
+{
+  "resourceType": "StructureDefinition",
+  "meta": {
+    "versionId": "14",
+    "lastUpdated": "2022-01-31T13:12:45.433+00:00"
+  },
+  "url": "https://www.fhir.philips.com/solution/4.0/StructureDefinition/airboard/observation-v1/AIRObservationSolidity",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRObservationSolidity",
+  "title": "AIRObservationSolidity",
+  "status": "draft",
+  "date": "2022-01-31T10:45:34.9675202Z",
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "ignacio.jauregui@philips.com",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "A derived profile from ILS Observation that captures solidity features of a lung tumor image.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://www.fhir.philips.com/4.0/StructureDefinition/common/resource/general/observation-v1/ILSObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://radlex.org",
+              "code": "RID46010",
+              "display": "Solidness descriptor"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "Lesion solidity descriptors",
+          "valueSet": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRSolidityValueSet"
+        }
+      }
+    ]
+  }
+}

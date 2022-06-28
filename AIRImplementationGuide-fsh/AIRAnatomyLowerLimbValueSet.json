@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRAnatomyLowerLimbValueSet",
+  "identifier": [
+    {
+      "system": "https://www.fhir.philips.com/solution/4.0/ValueSet",
+      "value": "airboard/valueSet-v1/AIRAnatomyLowerLimbValueSet"
+    }
+  ],
+  "version": "PACKAGE_VERSION",
+  "name": "AIRAnatomyLowerLimbValueSet",
+  "title": "Lower limb anatomical musculoskeletal structures",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "ignacio.jauregui@philips.com"
+        }
+      ]
+    }
+  ],
+  "description": "Musculoskeletal structures of the lower limb.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "71341001",
+            "display": "Bone structure of femur (body structure)"
+          },
+          {
+            "code": "12611008",
+            "display": "Bone structure of tibia (body structure)"
+          },
+          {
+            "code": "61685007",
+            "display": "Lower limb structure (body structure)"
+          },
+          {
+            "code": "24136001",
+            "display": "Hip joint structure (body structure)"
+          },
+          {
+            "code": "72696002",
+            "display": "Knee region structure (body structure)"
+          },
+          {
+            "code": "344001",
+            "display": "Ankle region structure (body structure)"
+          },
+          {
+            "code": "39352004",
+            "display": "Joint structure (body structure)"
+          }
+        ]
+      }
+    ]
+  }
+}

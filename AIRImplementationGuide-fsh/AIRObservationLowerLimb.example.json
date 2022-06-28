@@ -1,0 +1,78 @@
+{
+  "resourceType": "Observation",
+  "id": "AIRObservationLowerLimb.example",
+  "meta": {
+    "profile": [
+      "https://www.fhir.philips.com/solution/4.0/StructureDefinition/airboard/observation-v1/AIRObservationQuantitativeIndividual"
+    ]
+  },
+  "contained": [
+    {
+      "resourceType": "Device",
+      "id": "IBLLAMA",
+      "manufacturer": "Image biopsy lab",
+      "deviceName": [
+        {
+          "name": "LAMA",
+          "type": "user-friendly-name"
+        }
+      ],
+      "url": "https://www.imagebiopsy.com//"
+    }
+  ],
+  "partOf": [
+    {
+      "reference": "imagingstudy/ils-test-imagingstudy"
+    }
+  ],
+  "status": "preliminary",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "version": "4.0.1",
+          "code": "imaging",
+          "display": "imaging"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "410668003",
+        "display": "Length property (qualifier value)"
+      }
+    ],
+    "text": "Length"
+  },
+  "subject": {
+    "reference": "Patient/ils-test-ilspatient"
+  },
+  "focus": [
+    {
+      "reference": "BodyStructureLowerLimb.example"
+    }
+  ],
+  "effectiveDateTime": "2019-01-30T10:05:00.000Z",
+  "valueQuantity": {
+    "value": 23,
+    "unit": "cm"
+  },
+  "bodySite": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "71341001",
+        "display": "Bone structure of femur (body structure)"
+      }
+    ],
+    "text": "Femur"
+  },
+  "device": {
+    "reference": "#IBLLAMA",
+    "display": "LAMA"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "url": "https://www.fhir.philips.com/solution/4.0/ValueSet/airboard/valueSet-v1/AIRLesionTypeValueSet",
+  "version": "PACKAGE_VERSION",
+  "name": "AIRLesionTypeValueSet",
+  "title": "AIR Lesion Type",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Royal Philips",
+  "contact": [
+    {
+      "name": "Ignacio Jauregui",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "ignacio.jauregui@philips.com"
+        }
+      ]
+    }
+  ],
+  "description": "Examples of types of lesions to populate BodyStructure.morphology element",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "4147007",
+            "display": "Mass (morphologic abnormality)"
+          },
+          {
+            "code": "36118008",
+            "display": "Pneumothorax (disorder)"
+          },
+          {
+            "code": "60046008",
+            "display": "Pleural effusion (disorder)"
+          },
+          {
+            "code": "8186001",
+            "display": "Cardiomegaly (disorder)"
+          },
+          {
+            "code": "882784691000119100",
+            "display": "Pneumonia caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
+          },
+          {
+            "code": "49158009",
+            "display": "Emphysema (morphologic abnormality)"
+          },
+          {
+            "code": "13645005",
+            "display": "Chronic obstructive lung disease (disorder)"
+          }
+        ]
+      }
+    ]
+  }
+}
